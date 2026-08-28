@@ -1,0 +1,14 @@
+{
+  "caseId": "n01",
+  "kind": "no-heal",
+  "primarySpec": "clear-completed.spec.ts",
+  "variant": "n01",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\hollow-v1\\baseline\\n01\\tests",
+  "model": "nemo-super",
+  "usedFallback": false,
+  "promptTokens": 1382,
+  "completionTokens": 133,
+  "latencyMs": 1272,
+  "error": null
+}

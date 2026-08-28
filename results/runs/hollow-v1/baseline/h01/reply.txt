@@ -1,0 +1,13 @@
+```ts
+import { expect, test } from '@playwright/test';
+
+/** Locator strategy: positional — the third control in the filter group. */
+test('the completed filter shows only finished tasks', async ({ page }) => {
+  await page.goto('/');
+
+  await page.locator('.filter').nth(2).click();
+
+  await expect(page.getByTestId('task-item')).toHaveCount(1);
+  await expect(page.getByTestId('task-list')).toContainText('Pin the evaluation set');
+});
+```

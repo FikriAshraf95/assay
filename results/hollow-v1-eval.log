@@ -1,0 +1,104 @@
+﻿
+> assay@0.1.0 eval
+> tsx src/eval/run.ts
+
+no baseline run found for this id — running it now
+
+baseline — run hollow-v1
+model: nemo-super
+
+m01 delete-task.spec.ts        patched      1613+144 tok, 1289ms
+m02 add-task.spec.ts           patched      1368+119 tok, 1146ms
+m03 complete-task.spec.ts      patched      1456+123 tok, 1256ms
+m04 add-validation.spec.ts     patched      1398+100 tok, 969ms
+m05 complete-task.spec.ts      patched      1476+120 tok, 1077ms
+m06 empty-state.spec.ts        patched      1503+167 tok, 1544ms
+m07 delete-task.spec.ts        patched      1783+144 tok, 1278ms
+m08 add-task.spec.ts           patched      1424+118 tok, 1226ms
+m09 add-task.spec.ts           patched      1555+119 tok, 1031ms
+m10 filter-active.spec.ts      patched      1418+104 tok, 1021ms
+m11 filter-completed.spec.ts   patched      1454+113 tok, 1121ms
+m12 add-task.spec.ts           patched      1598+172 tok, 1674ms
+h01 filter-completed.spec.ts   patched      1513+113 tok, 1030ms
+h02 items-left.spec.ts         patched      1475+109 tok, 1039ms
+h03 items-left.spec.ts         patched      1456+103 tok, 953ms
+n01 clear-completed.spec.ts    patched      1382+133 tok, 1272ms
+n02 delete-task.spec.ts        patched      1612+142 tok, 1321ms
+n03 items-left.spec.ts         patched      1464+105 tok, 1054ms
+
+18 patched, 0 refused, 0 unparseable, 0 errors
+tokens: 26,948 in / 2,248 out
+models served: nemo-super
+
+wrote D:\Works\ai\competition\assay\results\runs\hollow-v1\baseline
+
+no agent run found for this id — running it now
+
+agent — run hollow-v1
+model: nemo-super
+
+m01 delete-task.spec.ts        accepted-guarded   1 call(s), 3020+148 tok
+m02 add-task.spec.ts           accepted-guarded   1 call(s), 2166+123 tok
+m03 complete-task.spec.ts      accepted-guarded   3 call(s), 10018+366 tok
+m04 add-validation.spec.ts     accepted-unguarded 1 call(s), 1829+106 tok
+m05 complete-task.spec.ts      accepted-guarded   2 call(s), 4765+254 tok
+m06 empty-state.spec.ts        accepted-guarded   1 call(s), 2019+167 tok
+m07 delete-task.spec.ts        accepted-guarded   1 call(s), 2344+149 tok
+m08 add-task.spec.ts           accepted-guarded   1 call(s), 1935+118 tok
+m09 add-task.spec.ts           escalated          3 call(s), 7877+363 tok
+m10 filter-active.spec.ts      accepted-guarded   1 call(s), 2384+110 tok
+m11 filter-completed.spec.ts   accepted-guarded   1 call(s), 1935+95 tok
+m12 add-task.spec.ts           escalated          3 call(s), 7223+424 tok
+h01 filter-completed.spec.ts   escalated          3 call(s), 6585+292 tok
+h02 items-left.spec.ts         accepted-guarded   1 call(s), 1871+109 tok
+h03 items-left.spec.ts         accepted-guarded   1 call(s), 1839+103 tok
+n01 clear-completed.spec.ts    escalated          3 call(s), 6379+325 tok
+n02 delete-task.spec.ts        refused-triage   (0 model calls)
+n03 items-left.spec.ts         refused-triage   (0 model calls)
+
+accepted 11 guarded / 1 unguarded, refused 2 triage / 0 model, escalated 4, errors 0
+tokens: 64,189 in / 3,252 out over 27 call(s)
+
+wrote D:\Works\ai\competition\assay\results\runs\hollow-v1\agent
+
+scoring run hollow-v1 — model nemo-super
+
+case  baseline            agent
+────────────────────────────────────────────────────
+m01   !failed-heal         valid-heal
+m02   !failed-heal         valid-heal
+m03    valid-heal          valid-heal
+m04    valid-heal          valid-heal
+m05   !failed-heal         valid-heal
+m06    valid-heal          valid-heal
+m07    valid-heal          valid-heal
+m08    valid-heal          valid-heal
+m09    valid-heal         !no-patch
+m10    valid-heal          valid-heal
+m11   !failed-heal         valid-heal
+m12   !failed-heal        !no-patch
+h01   !failed-heal        !no-patch
+h02    valid-heal          valid-heal
+h03    valid-heal          valid-heal
+n01   !ineffective-patch   correct-refusal
+n02   !ineffective-patch   correct-refusal
+n03   !false-heal          correct-refusal
+
+────────────────────────────────────────────────────────────────────────
+metric                              baseline     agent      change
+────────────────────────────────────────────────────────────────────────
+Valid heal rate (12 heal cases)        60.0%     80.0%   +20.0 pts +
+Correct refusal rate (3 no-heal)        0.0%    100.0%  +100.0 pts +
+Correct action rate (all 15)           50.0%     83.3%   +33.3 pts +
+False heal rate (all 15)                5.6%      0.0%    -5.6 pts +
+Pass rate — the misleading one         55.6%     66.7%   +11.1 pts  
+────────────────────────────────────────────────────────────────────────
+valid heal rate  baseline ████████████········
+                 agent    ████████████████····
+
+tokens   baseline 29,196   agent 67,441
+calls    baseline 18   agent 27   (agent spends more per case and refuses without spending at all)
+handed to a human   baseline 0   agent 6
+
+wrote D:\Works\ai\competition\assay\results\runs\hollow-v1\comparison.json
+run `npm run report` to render the reviewable HTML report

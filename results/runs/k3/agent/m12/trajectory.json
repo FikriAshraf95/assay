@@ -1,0 +1,31 @@
+{
+  "caseId": "m12",
+  "kind": "heal",
+  "primarySpec": "add-task.spec.ts",
+  "variant": "m12",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "+ details[1]{class=composer-shell}\n+ summary[0]{class=composer-summary text=New task}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 2004,
+      "completionTokens": 489,
+      "latencyMs": 15078
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\k3\\agent\\m12\\tests",
+  "modelCalls": 1,
+  "promptTokens": 2004,
+  "completionTokens": 489,
+  "escalationReport": null,
+  "error": null
+}

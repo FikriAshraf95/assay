@@ -1,0 +1,14 @@
+{
+  "caseId": "m10",
+  "kind": "heal",
+  "primarySpec": "filter-active.spec.ts",
+  "variant": "m10",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\hollow-v1\\baseline\\m10\\tests",
+  "model": "nemo-super",
+  "usedFallback": false,
+  "promptTokens": 1418,
+  "completionTokens": 104,
+  "latencyMs": 1021,
+  "error": null
+}

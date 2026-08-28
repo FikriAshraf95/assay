@@ -1,0 +1,26 @@
+{
+  "actor": "probe",
+  "label": "reachability",
+  "at": "2026-08-28T16:10:22.404Z",
+  "request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with exactly the word READY and nothing else."
+      }
+    ],
+    "temperature": 0,
+    "maxTokens": 4096
+  },
+  "response": {
+    "text": "READY",
+    "model": "nemo-super",
+    "promptTokens": 36,
+    "completionTokens": 3,
+    "requestedModel": "nemo-super",
+    "usedFallback": false,
+    "latencyMs": 269,
+    "attempts": 1
+  },
+  "error": null
+}

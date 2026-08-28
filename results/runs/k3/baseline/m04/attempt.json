@@ -1,0 +1,14 @@
+{
+  "caseId": "m04",
+  "kind": "heal",
+  "primarySpec": "add-validation.spec.ts",
+  "variant": "m04",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\k3\\baseline\\m04\\tests",
+  "model": "kimi-k3",
+  "usedFallback": false,
+  "promptTokens": 1447,
+  "completionTokens": 256,
+  "latencyMs": 13670,
+  "error": null
+}

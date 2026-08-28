@@ -1,0 +1,14 @@
+{
+  "caseId": "m05",
+  "kind": "heal",
+  "primarySpec": "complete-task.spec.ts",
+  "variant": "m05",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-17-20-954Z\\baseline\\m05\\tests",
+  "model": "nemo-super",
+  "usedFallback": false,
+  "promptTokens": 1476,
+  "completionTokens": 120,
+  "latencyMs": 1181,
+  "error": null
+}

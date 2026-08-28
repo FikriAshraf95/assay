@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taskly</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app" id="app">
+      <header class="app-header">
+        <h1 class="app-title">Taskly</h1>
+        <span class="badge" id="items-left" data-qa="items-left">2 items left</span>
+      </header>
+
+      <form class="composer" id="composer" data-qa="composer">
+        <input class="composer-input" id="new-task" type="text" placeholder="What needs doing?" autocomplete="off" data-qa="new-task-input">
+        <button class="btn btn-primary" id="add-task" type="submit" data-qa="add-task">
+          Add
+        </button>
+      </form>
+
+      <div class="toolbar">
+        <input class="search-input" id="search" type="search" placeholder="Search tasks" autocomplete="off" data-qa="search">
+        <div class="filters" id="filters" role="group" aria-label="Filter tasks" data-qa="filters">
+          <button class="filter is-active" data-filter="all" type="button" data-qa="filter-all">All</button>
+          <button class="filter" data-filter="active" type="button" data-qa="filter-active">Active</button>
+          <button class="filter" data-filter="completed" type="button" data-qa="filter-completed">Completed</button>
+        </div>
+      </div>
+
+      <ul class="task-list" id="task-list" data-qa="task-list"></ul>
+
+      <p class="empty-state" id="empty-state" hidden="" data-qa="empty-state">Nothing here.</p>
+
+      <footer class="app-footer">
+        <button class="btn btn-ghost" id="clear-completed" type="button" data-qa="clear-completed">
+          Clear completed
+        </button>
+      </footer>
+    </main>
+
+    <!--
+      Row markup. app.js lifts the inner HTML at mount and removes this container, so it never
+      appears in the rendered page. It lives in the document (rather than in a JS string) so that
+      DOM mutations can reach the row template the same way they reach the rest of the markup.
+    -->
+    <div id="task-template" hidden="">
+      <li class="task-item" data-qa="task-item">
+        <input class="task-toggle" type="checkbox" data-qa="task-toggle">
+        <span class="task-title" data-qa="task-title"></span>
+        <button class="task-delete" type="button" data-qa="task-delete">Delete</button>
+      </li>
+    </div>
+
+    <script src="./app.js"></script>
+  
+
+</body></html>

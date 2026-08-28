@@ -1,0 +1,33 @@
+{
+  "name": "assay",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-healing Playwright tests that stay honest — every repair is verified against a behaviour-broken build before it is accepted.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "fixtures:build": "tsx src/fixtures/build.ts",
+    "fixtures:serve": "tsx src/fixtures/serve.ts",
+    "fixtures:validate": "tsx src/fixtures/validate.ts",
+    "baseline": "tsx src/baseline/run.ts",
+    "agent": "tsx src/agent/run.ts",
+    "eval": "tsx src/eval/run.ts",
+    "report": "tsx src/report/build.ts",
+    "trajectories:snapshot": "tsx src/trajectories/snapshot.ts",
+    "llm:probe": "tsx src/llm/probe.ts",
+    "llm:models": "tsx src/llm/models.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "openai": "^4.104.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

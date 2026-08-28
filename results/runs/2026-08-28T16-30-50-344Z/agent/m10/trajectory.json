@@ -1,0 +1,32 @@
+{
+  "caseId": "m10",
+  "kind": "heal",
+  "primarySpec": "filter-active.spec.ts",
+  "variant": "m10",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "failureKind": "assertion-mismatch",
+    "structureChanged": true,
+    "reason": "Every locator resolved, but the page structure differs from the last known-good build — a locator is very likely resolving to the wrong element.",
+    "structureSummary": "- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- input[0]{class=search-input data-testid=search id=search placeholder=Search tasks type=search}\n- div[1]{aria-label=Filter tasks class=filters data-testid=filters id=filters role=group}\n+ input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=¿Qué hay que hacer? type=text}\n+ input[0]{class=search-input data-testid=search id=search placeholder=Buscar tareas type=search}\n+ div[1]{aria-label=Filtrar tareas class=filters data-testid=filters id=filters role=group}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 1974,
+      "completionTokens": 110,
+      "latencyMs": 1138
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m10\\tests",
+  "modelCalls": 1,
+  "promptTokens": 1974,
+  "completionTokens": 110,
+  "escalationReport": null,
+  "error": null
+}

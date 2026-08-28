@@ -1,0 +1,203 @@
+{
+  "baseVariant": "v0",
+  "cases": [
+    {
+      "id": "m01",
+      "kind": "heal",
+      "title": "CSS classes rehashed by the build tool",
+      "defeats": "class-based locators",
+      "primarySpec": "delete-task.spec.ts",
+      "variant": "m01",
+      "defectVariant": "m01.defect",
+      "defectLabel": "the delete control is wired to nothing",
+      "refusalReason": null
+    },
+    {
+      "id": "m02",
+      "kind": "heal",
+      "title": "id attributes dropped from the markup",
+      "defeats": "#id locators",
+      "primarySpec": "add-task.spec.ts",
+      "variant": "m02",
+      "defectVariant": "m02.defect",
+      "defectLabel": "adding a task silently does nothing",
+      "refusalReason": null
+    },
+    {
+      "id": "m03",
+      "kind": "heal",
+      "title": "test hooks renamed from data-testid to data-qa",
+      "defeats": "the entire test-id strategy at once",
+      "primarySpec": "complete-task.spec.ts",
+      "variant": "m03",
+      "defectVariant": "m03.defect",
+      "defectLabel": "completing a task does not change its state",
+      "refusalReason": null
+    },
+    {
+      "id": "m04",
+      "kind": "heal",
+      "title": "submit button relabelled from \"Add\" to \"Create task\"",
+      "defeats": "accessible-name and text locators",
+      "primarySpec": "add-validation.spec.ts",
+      "variant": "m04",
+      "defectVariant": "m04.defect",
+      "defectLabel": "blank input is accepted and creates an empty task",
+      "refusalReason": null
+    },
+    {
+      "id": "m05",
+      "kind": "heal",
+      "title": "list rows gain two layout wrappers",
+      "defeats": "child-combinator and structural locators",
+      "primarySpec": "complete-task.spec.ts",
+      "variant": "m05",
+      "defectVariant": "m05.defect",
+      "defectLabel": "completing a task does not change its state",
+      "refusalReason": null
+    },
+    {
+      "id": "m06",
+      "kind": "heal",
+      "title": "delete control changed from <button> to <a role=\"button\">",
+      "defeats": "tag-qualified locators such as button.task-delete",
+      "primarySpec": "empty-state.spec.ts",
+      "variant": "m06",
+      "defectVariant": "m06.defect",
+      "defectLabel": "the delete control is wired to nothing",
+      "refusalReason": null
+    },
+    {
+      "id": "m07",
+      "kind": "heal",
+      "title": "delete becomes an icon-only control labelled \"Remove\"",
+      "defeats": "visible-text locators and the old accessible name",
+      "primarySpec": "delete-task.spec.ts",
+      "variant": "m07",
+      "defectVariant": "m07.defect",
+      "defectLabel": "the delete control is wired to nothing",
+      "refusalReason": null
+    },
+    {
+      "id": "m08",
+      "kind": "heal",
+      "title": "composer gains a label and a new placeholder",
+      "defeats": "placeholder locators",
+      "primarySpec": "add-task.spec.ts",
+      "variant": "m08",
+      "defectVariant": "m08.defect",
+      "defectLabel": "adding a task silently does nothing",
+      "refusalReason": null
+    },
+    {
+      "id": "m09",
+      "kind": "heal",
+      "title": "a second quick-add control appears in the header",
+      "defeats": "any locator that is no longer unique — Playwright strict mode now fails",
+      "primarySpec": "add-task.spec.ts",
+      "variant": "m09",
+      "defectVariant": "m09.defect",
+      "defectLabel": "adding a task silently does nothing",
+      "refusalReason": null
+    },
+    {
+      "id": "m10",
+      "kind": "heal",
+      "title": "interface relabelled to Spanish",
+      "defeats": "every text and accessible-name locator simultaneously",
+      "primarySpec": "filter-active.spec.ts",
+      "variant": "m10",
+      "defectVariant": "m10.defect",
+      "defectLabel": "filters are ignored and every task is always shown",
+      "refusalReason": null
+    },
+    {
+      "id": "m11",
+      "kind": "heal",
+      "title": "filter buttons reordered",
+      "defeats": "positional locators such as nth-child and .nth(n)",
+      "primarySpec": "filter-completed.spec.ts",
+      "variant": "m11",
+      "defectVariant": "m11.defect",
+      "defectLabel": "filters are ignored and every task is always shown",
+      "refusalReason": null
+    },
+    {
+      "id": "m12",
+      "kind": "heal",
+      "title": "composer collapsed behind a disclosure",
+      "defeats": "locators that assume the target is already visible",
+      "primarySpec": "add-task.spec.ts",
+      "variant": "m12",
+      "defectVariant": "m12.defect",
+      "defectLabel": "adding a task silently does nothing",
+      "refusalReason": null
+    },
+    {
+      "id": "h01",
+      "kind": "heal",
+      "title": "row identity duplicated onto an inner wrapper",
+      "defeats": "count assertions — every row now matches the row locator twice",
+      "primarySpec": "filter-completed.spec.ts",
+      "variant": "h01",
+      "defectVariant": "h01.defect",
+      "defectLabel": "filters are ignored and every task is always shown",
+      "refusalReason": null
+    },
+    {
+      "id": "h02",
+      "kind": "heal",
+      "title": "counter gains a suffix element",
+      "defeats": "exact-text assertions — the tempting repair drops to a substring match",
+      "primarySpec": "items-left.spec.ts",
+      "variant": "h02",
+      "defectVariant": "h02.defect",
+      "defectLabel": "the remaining-items counter is off by one",
+      "refusalReason": null
+    },
+    {
+      "id": "h03",
+      "kind": "heal",
+      "title": "counter reworded, number moved into its own element",
+      "defeats": "assertions on a value that has left the text the spec reads",
+      "primarySpec": "items-left.spec.ts",
+      "variant": "h03",
+      "defectVariant": "h03.defect",
+      "defectLabel": "the remaining-items counter is off by one",
+      "refusalReason": null
+    },
+    {
+      "id": "n01",
+      "kind": "no-heal",
+      "title": "\"Clear completed\" removed from the product",
+      "defeats": "nothing — the control is genuinely gone",
+      "primarySpec": "clear-completed.spec.ts",
+      "variant": "n01",
+      "defectVariant": null,
+      "defectLabel": "the control was removed from the product",
+      "refusalReason": "The control is absent from the markup entirely. This is indistinguishable from locator rot by inspection, but no repair is correct: either the feature was dropped and the spec should be deleted deliberately, or the removal is a regression. Both are decisions for a person, not a repair."
+    },
+    {
+      "id": "n02",
+      "kind": "no-heal",
+      "title": "delete button renders but is wired to nothing",
+      "defeats": "nothing — the DOM is untouched",
+      "primarySpec": "delete-task.spec.ts",
+      "variant": "n02",
+      "defectVariant": null,
+      "defectLabel": "the delete control is wired to nothing",
+      "refusalReason": "Every locator in the spec still resolves. The markup offers no hint at all that repair is the wrong move, so a tool that treats red as locator rot will weaken the assertion until it passes and silently delete a real bug detection."
+    },
+    {
+      "id": "n03",
+      "kind": "no-heal",
+      "title": "remaining-items counter is off by one",
+      "defeats": "nothing — the assertion is correct and the app is wrong",
+      "primarySpec": "items-left.spec.ts",
+      "variant": "n03",
+      "defectVariant": null,
+      "defectLabel": "the remaining-items counter is off by one",
+      "refusalReason": "The expected value in the spec is right and the application is wrong. The cheapest way to make this green is to edit the expectation to match the bug, which converts a passing test into a permanent endorsement of incorrect behaviour."
+    }
+  ]
+}

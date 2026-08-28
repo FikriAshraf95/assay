@@ -1,0 +1,41 @@
+{
+  "caseId": "m11",
+  "kind": "heal",
+  "primarySpec": "filter-completed.spec.ts",
+  "variant": "m11",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "- button[0]{class=filter is-active data-filter=all data-testid=filter-all type=button text=All}\n- button[2]{class=filter data-filter=completed data-testid=filter-completed type=button text=Completed}\n+ button[0]{class=filter data-filter=completed data-testid=filter-completed type=button text=Completed}\n+ button[2]{class=filter is-active data-filter=all data-testid=filter-all type=button text=All}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 1968,
+      "completionTokens": 202,
+      "latencyMs": 20245
+    },
+    {
+      "attempt": 2,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 2586,
+      "completionTokens": 328,
+      "latencyMs": 14420
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\k3\\agent\\m11\\tests",
+  "modelCalls": 2,
+  "promptTokens": 4554,
+  "completionTokens": 530,
+  "escalationReport": null,
+  "error": null
+}

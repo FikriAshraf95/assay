@@ -1,0 +1,27 @@
+Running 1 test using 1 worker
+
+  x  1 tests\filter-active.spec.ts:4:1 › the active filter hides completed tasks (15.0s)
+
+
+  1) tests\filter-active.spec.ts:4:1 › the active filter hides completed tasks ─────────────────────
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Active' })
+
+
+       5 |   await page.goto('/');
+       6 |
+    >  7 |   await page.getByRole('button', { name: 'Active' }).click();
+         |                                                      ^
+       8 |
+       9 |   await expect(page.getByTestId('task-item')).toHaveCount(2);
+      10 |   await expect(page.getByTestId('task-list')).not.toContainText('Pin the evaluation set');
+        at D:\Works\ai\competition\assay\tests\filter-active.spec.ts:7:54
+
+    Error Context: test-results\filter-active-the-active-filter-hides-completed-tasks\error-context.md
+
+  1 failed
+    tests\filter-active.spec.ts:4:1 › the active filter hides completed tasks ──────────────────────

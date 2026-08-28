@@ -1,0 +1,41 @@
+{
+  "caseId": "m05",
+  "kind": "heal",
+  "primarySpec": "complete-task.spec.ts",
+  "variant": "m05",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n+ div[0]{class=task-row}\n+ div[0]{class=task-main}\n+ div[1]{class=task-actions}\n+ button[0]{class=task-delete data-testid=task-delete type=button text=Delete}\n+ div[0]{class=task-row}\n+ div[0]{class=task-main}\n+ div[1]{class=task-actions}\n+ button[0]{class=task-delete data-testid=task-delete type=button text=Delete}\n+ div[0]{class=task-row}\n+ div[0]{class=task-main}\n+ div[1]{class=task-actions}\n+ button[0]{class=task-delete data-testid=task-delete type=button text=Delete}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 2073,
+      "completionTokens": 127,
+      "latencyMs": 1206
+    },
+    {
+      "attempt": 2,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 2692,
+      "completionTokens": 127,
+      "latencyMs": 1179
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\hollow-v1\\agent\\m05\\tests",
+  "modelCalls": 2,
+  "promptTokens": 4765,
+  "completionTokens": 254,
+  "escalationReport": null,
+  "error": null
+}

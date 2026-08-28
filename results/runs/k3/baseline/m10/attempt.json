@@ -1,0 +1,14 @@
+{
+  "caseId": "m10",
+  "kind": "heal",
+  "primarySpec": "filter-active.spec.ts",
+  "variant": "m10",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\k3\\baseline\\m10\\tests",
+  "model": "kimi-k3",
+  "usedFallback": false,
+  "promptTokens": 1468,
+  "completionTokens": 264,
+  "latencyMs": 7614,
+  "error": null
+}

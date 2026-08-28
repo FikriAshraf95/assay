@@ -1,0 +1,14 @@
+{
+  "caseId": "m02",
+  "kind": "heal",
+  "primarySpec": "add-task.spec.ts",
+  "variant": "m02",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\triage-v2\\baseline\\m02\\tests",
+  "model": "nemo-super",
+  "usedFallback": false,
+  "promptTokens": 1368,
+  "completionTokens": 119,
+  "latencyMs": 1215,
+  "error": null
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "m08",
+  "kind": "heal",
+  "primarySpec": "add-task.spec.ts",
+  "variant": "m08",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "failureKind": "assertion-mismatch",
+    "structureChanged": true,
+    "reason": "Every locator resolved, but the page structure differs from the last known-good build — a locator is very likely resolving to the wrong element.",
+    "structureSummary": "- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- button[1]{class=btn btn-primary data-testid=add-task id=add-task type=submit}\n+ label[0]{class=composer-label}\n+ input[1]{class=composer-input data-testid=new-task-input id=new-task placeholder=Add an item type=text}\n+ button[2]{class=btn btn-primary data-testid=add-task id=add-task type=submit}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 1928,
+      "completionTokens": 118,
+      "latencyMs": 1125
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m08\\tests",
+  "modelCalls": 1,
+  "promptTokens": 1928,
+  "completionTokens": 118,
+  "escalationReport": null,
+  "error": null
+}

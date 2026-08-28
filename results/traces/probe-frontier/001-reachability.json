@@ -1,0 +1,26 @@
+{
+  "actor": "probe",
+  "label": "reachability",
+  "at": "2026-08-28T17:15:06.529Z",
+  "request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with exactly the word READY and nothing else."
+      }
+    ],
+    "temperature": 1,
+    "maxTokens": 4096
+  },
+  "response": {
+    "text": "READY",
+    "model": "kimi-k3",
+    "promptTokens": 95,
+    "completionTokens": 48,
+    "requestedModel": "kimi-k3",
+    "usedFallback": false,
+    "latencyMs": 5851,
+    "attempts": 1
+  },
+  "error": null
+}

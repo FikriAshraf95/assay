@@ -1,0 +1,27 @@
+Running 1 test using 1 worker
+
+  x  1 tests\complete-task.spec.ts:4:1 › marks a task as complete and updates the counter (15.0s)
+
+
+  1) tests\complete-task.spec.ts:4:1 › marks a task as complete and updates the counter ────────────
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.check: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for locator('.task-item > .task-toggle').first()
+
+
+       5 |   await page.goto('/');
+       6 |
+    >  7 |   await page.locator('.task-item > .task-toggle').first().check();
+         |                                                           ^
+       8 |
+       9 |   await expect(page.getByTestId('items-left')).toHaveText('1 item left');
+      10 |   await expect(page.locator('.task-item').first()).toHaveClass(/is-completed/);
+        at D:\Works\ai\competition\assay\tests\complete-task.spec.ts:7:59
+
+    Error Context: test-results\complete-task-marks-a-task-5bcb6-ete-and-updates-the-counter\error-context.md
+
+  1 failed
+    tests\complete-task.spec.ts:4:1 › marks a task as complete and updates the counter ─────────────

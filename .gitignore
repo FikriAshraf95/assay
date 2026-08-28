@@ -1,0 +1,14 @@
+node_modules/
+
+# Credentials never enter the repository. Copy .env.example and fill it in locally.
+.env
+.env.local
+.env.*.local
+
+# Playwright's own output. The harness writes what it needs to results/ instead.
+playwright-report/
+test-results/
+blob-report/
+
+# Scratch space for healer working copies of specs.
+results/scratch/

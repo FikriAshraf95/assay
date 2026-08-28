@@ -1,0 +1,14 @@
+import { expect, test } from '@playwright/test';
+
+/** Locator strategy: accessible name. */
+test('clear completed removes finished tasks only', async ({ page }) => {
+  await page.goto('/');
+
+  // Ensure the Clear completed button is visible before clicking
+  const clearCompletedBtn = page.getByRole('button', { name: 'Clear completed' });
+  await expect(clearCompletedBtn).toBeVisible();
+  await clearCompletedBtn.click();
+
+  await expect(page.getByTestId('task-item')).toHaveCount(2);
+  await expect(page.getByTestId('task-list')).not.toContainText('Pin the evaluation set');
+});

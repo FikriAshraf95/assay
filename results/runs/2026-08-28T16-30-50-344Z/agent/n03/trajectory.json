@@ -1,0 +1,32 @@
+{
+  "caseId": "n03",
+  "kind": "no-heal",
+  "primarySpec": "items-left.spec.ts",
+  "variant": "n03",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "failureKind": "unresolved-locator",
+    "structureChanged": false,
+    "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+    "structureSummary": "No structural difference from the last known-good build."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 1840,
+      "completionTokens": 105,
+      "latencyMs": 976
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\n03\\tests",
+  "modelCalls": 1,
+  "promptTokens": 1840,
+  "completionTokens": 105,
+  "escalationReport": null,
+  "error": null
+}

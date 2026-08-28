@@ -1,0 +1,32 @@
+{
+  "caseId": "m01",
+  "kind": "heal",
+  "primarySpec": "delete-task.spec.ts",
+  "variant": "m01",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "failureKind": "unresolved-locator",
+    "structureChanged": true,
+    "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+    "structureSummary": "- span[1]{class=badge data-testid=items-left id=items-left}\n- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- input[0]{class=search-input data-testid=search id=search placeholder=Search tasks type=search}\n- button[0]{class=filter is-active data-filter=all data-testid=filter-all type=button}\n- button[1]{class=filter data-filter=active data-testid=filter-active type=button}\n- button[2]{class=filter data-filter=completed data-testid=filter-completed type=button}\n- ul[3]{class=task-list data-testid=task-list id=task-list}\n- li[0]{class=task-item data-task-id=1 data-testid=task-item}\n- input[0]{aria-label=Toggle Write the reproduction guide class=task-toggle data-testid=task-toggle type=checkbox}\n- span[1]{class=task-title data-testid=task-title}\n- span[1]{class=task-title data-testid=task-title}\n- span[1]{class=task-title data-testid=task-title}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- li[1]{class=task-item data-task-id=2 data-testid=task-item}\n- input[0]{aria-label=Toggle Record the demo video class=task-toggle data-testid=task-toggle type=checkbox}\n- li[2]{class=task-item is-completed data-task-id=3 data-testid=task-item}\n- input[0]{aria-label=Toggle Pin the evaluation set class=task-toggle data-testid=task-toggle type=checkbox}\n- p[4]{class=empty-state data-testid=empty-state hidden= id=empty-state}\n+ span[1]{class=bdg-6f1c33 data-testid=items-left id=items-left}\n+ input[0]{class=cmp-51fa2c data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n+ input[0]{class=cmp-77b1e0 data-testid=search id=search placeholder=Search tasks type=search}\n+ button[0]{class=flt-8823ac flt-ac7v01 data-filter=all data-testid=filter-all type=button}\n+ button[1]{class=flt-8823ac data-filter=active data-testid=filter-active type=button}\n+ button[2]{class=flt-8823ac data-filter=completed data-testid=filter-completed type=button}\n+ ul[3]{class=lst-19ffab data-testid=task-list id=task-list}\n+ li[0]{class=tsk-4f2a91 data-task-id=1 data-testid=task-item}\n+ input[0]{aria-label=Toggle Write the reproduction guide class=tsk-01ab4e data-testid=task-toggle type=checkbox}\n+ span[1]{class=tsk-9c31b0 data-testid=task-title}\n+ button[2]{class=tsk-77de12 data-testid=task-delete type=button}\n+ li[1]{class=tsk-4f2a91 data-task-id=2 data-testid=task-item}\n+ input[0]{aria-label=Toggle Record the demo video class=tsk-01ab4e data-testid=task-toggle type=checkbox}\n+ span[1]{class=tsk-9c31b0 data-testid=task-title}\n+ button[2]{class=tsk-77de12 data-testid=task-delete type=button}\n+ li[2]{class=tsk-4f2a91 tsk-c0mpl3 data-task-id=3 data-testid=task-item}\n+ input[0]{aria-label=Toggle Pin the evaluation set class=tsk-01ab4e data-testid=task-toggle type=checkbox}\n+ span[1]{class=tsk-9c31b0 data-testid=task-title}\n+ button[2]{class=tsk-77de12 data-testid=task-delete type=button}\n+ p[4]{class=emp-4a2d90 data-testid=empty-state hidden= id=empty-state}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 2974,
+      "completionTokens": 147,
+      "latencyMs": 1485
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m01\\tests",
+  "modelCalls": 1,
+  "promptTokens": 2974,
+  "completionTokens": 147,
+  "escalationReport": null,
+  "error": null
+}

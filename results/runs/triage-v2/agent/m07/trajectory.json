@@ -1,0 +1,31 @@
+{
+  "caseId": "m07",
+  "kind": "heal",
+  "primarySpec": "delete-task.spec.ts",
+  "variant": "m07",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n+ button[2]{aria-label=Remove class=task-delete data-testid=task-delete type=button text=}\n+ svg[0]{aria-hidden=true}\n+ path[0]{}\n+ button[2]{aria-label=Remove class=task-delete data-testid=task-delete type=button text=}\n+ svg[0]{aria-hidden=true}\n+ path[0]{}\n+ button[2]{aria-label=Remove class=task-delete data-testid=task-delete type=button text=}\n+ svg[0]{aria-hidden=true}\n+ path[0]{}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 2344,
+      "completionTokens": 149,
+      "latencyMs": 1384
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\triage-v2\\agent\\m07\\tests",
+  "modelCalls": 1,
+  "promptTokens": 2344,
+  "completionTokens": 149,
+  "escalationReport": null,
+  "error": null
+}

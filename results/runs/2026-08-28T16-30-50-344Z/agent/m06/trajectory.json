@@ -1,0 +1,32 @@
+{
+  "caseId": "m06",
+  "kind": "heal",
+  "primarySpec": "empty-state.spec.ts",
+  "variant": "m06",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "failureKind": "assertion-mismatch",
+    "structureChanged": true,
+    "reason": "Every locator resolved, but the page structure differs from the last known-good build — a locator is very likely resolving to the wrong element.",
+    "structureSummary": "- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n+ a[2]{class=task-delete data-testid=task-delete href=# role=button}\n+ a[2]{class=task-delete data-testid=task-delete href=# role=button}\n+ a[2]{class=task-delete data-testid=task-delete href=# role=button}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 2004,
+      "completionTokens": 167,
+      "latencyMs": 1485
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m06\\tests",
+  "modelCalls": 1,
+  "promptTokens": 2004,
+  "completionTokens": 167,
+  "escalationReport": null,
+  "error": null
+}

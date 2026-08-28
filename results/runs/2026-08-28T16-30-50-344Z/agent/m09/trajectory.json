@@ -1,0 +1,52 @@
+{
+  "caseId": "m09",
+  "kind": "heal",
+  "primarySpec": "add-task.spec.ts",
+  "variant": "m09",
+  "outcome": "escalated",
+  "triage": {
+    "verdict": "repair",
+    "failureKind": "unresolved-locator",
+    "structureChanged": true,
+    "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+    "structureSummary": "- form[1]{class=composer data-testid=composer id=composer}\n- div[2]{class=toolbar}\n- ul[3]{class=task-list data-testid=task-list id=task-list}\n- p[4]{class=empty-state data-testid=empty-state hidden= id=empty-state}\n- footer[5]{class=app-footer}\n+ div[1]{class=quick-add data-testid=quick-add}\n+ input[0]{class=composer-input placeholder=What needs doing? type=text}\n+ button[1]{class=btn btn-primary type=button}\n+ form[2]{class=composer data-testid=composer id=composer}\n+ div[3]{class=toolbar}\n+ ul[4]{class=task-list data-testid=task-list id=task-list}\n+ p[5]{class=empty-state data-testid=empty-state hidden= id=empty-state}\n+ footer[6]{class=app-footer}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 2148,
+      "completionTokens": 141,
+      "latencyMs": 1326
+    },
+    {
+      "attempt": 2,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 2947,
+      "completionTokens": 141,
+      "latencyMs": 1313
+    },
+    {
+      "attempt": 3,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 2947,
+      "completionTokens": 141,
+      "latencyMs": 1393
+    }
+  ],
+  "patchedTestDir": null,
+  "modelCalls": 3,
+  "promptTokens": 8042,
+  "completionTokens": 423,
+  "escalationReport": "**No repair could be verified after 3 attempt(s).**\n\nNo candidate repair passed against the application. The control this test needs may have been removed rather than moved, which is a product decision rather than a repair.\n\nA person should decide whether this test should be rewritten, retargeted or deleted.",
+  "error": null
+}

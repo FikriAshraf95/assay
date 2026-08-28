@@ -1,0 +1,26 @@
+{
+  "actor": "probe",
+  "label": "determinism (run 2)",
+  "at": "2026-08-28T17:15:17.561Z",
+  "request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Name three primary colours as a comma-separated list. No other text."
+      }
+    ],
+    "temperature": 1,
+    "maxTokens": 4096
+  },
+  "response": {
+    "text": "Red, yellow, blue",
+    "model": "kimi-k3",
+    "promptTokens": 99,
+    "completionTokens": 119,
+    "requestedModel": "kimi-k3",
+    "usedFallback": false,
+    "latencyMs": 5871,
+    "attempts": 1
+  },
+  "error": null
+}

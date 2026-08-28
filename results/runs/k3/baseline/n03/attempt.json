@@ -1,0 +1,14 @@
+{
+  "caseId": "n03",
+  "kind": "no-heal",
+  "primarySpec": "items-left.spec.ts",
+  "variant": "n03",
+  "outcome": "refused",
+  "patchedTestDir": null,
+  "model": "kimi-k3",
+  "usedFallback": false,
+  "promptTokens": 1507,
+  "completionTokens": 1207,
+  "latencyMs": 37596,
+  "error": null
+}

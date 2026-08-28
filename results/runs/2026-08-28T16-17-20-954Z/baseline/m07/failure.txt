@@ -1,0 +1,27 @@
+Running 1 test using 1 worker
+
+  x  1 tests\delete-task.spec.ts:4:1 › deletes the task whose delete control was clicked (15.0s)
+
+
+  1) tests\delete-task.spec.ts:4:1 › deletes the task whose delete control was clicked ─────────────
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for locator('.task-item').filter({ hasText: 'Record the demo video' }).getByRole('button', { name: 'Delete' })
+
+
+       6 |
+       7 |   const row = page.locator('.task-item').filter({ hasText: 'Record the demo video' });
+    >  8 |   await row.getByRole('button', { name: 'Delete' }).click();
+         |                                                     ^
+       9 |
+      10 |   await expect(page.getByTestId('task-list')).not.toContainText('Record the demo video');
+      11 |   await expect(page.getByTestId('task-item')).toHaveCount(2);
+        at D:\Works\ai\competition\assay\tests\delete-task.spec.ts:8:53
+
+    Error Context: test-results\delete-task-deletes-the-ta-9c213--delete-control-was-clicked\error-context.md
+
+  1 failed
+    tests\delete-task.spec.ts:4:1 › deletes the task whose delete control was clicked ──────────────

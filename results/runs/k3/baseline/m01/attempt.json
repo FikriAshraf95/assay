@@ -1,0 +1,14 @@
+{
+  "caseId": "m01",
+  "kind": "heal",
+  "primarySpec": "delete-task.spec.ts",
+  "variant": "m01",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\k3\\baseline\\m01\\tests",
+  "model": "kimi-k3",
+  "usedFallback": false,
+  "promptTokens": 1626,
+  "completionTokens": 448,
+  "latencyMs": 15937,
+  "error": null
+}

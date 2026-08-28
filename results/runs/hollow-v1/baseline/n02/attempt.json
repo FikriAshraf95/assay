@@ -1,0 +1,14 @@
+{
+  "caseId": "n02",
+  "kind": "no-heal",
+  "primarySpec": "delete-task.spec.ts",
+  "variant": "n02",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\hollow-v1\\baseline\\n02\\tests",
+  "model": "nemo-super",
+  "usedFallback": false,
+  "promptTokens": 1612,
+  "completionTokens": 142,
+  "latencyMs": 1321,
+  "error": null
+}

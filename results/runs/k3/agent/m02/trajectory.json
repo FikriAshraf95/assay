@@ -1,0 +1,31 @@
+{
+  "caseId": "m02",
+  "kind": "heal",
+  "primarySpec": "add-task.spec.ts",
+  "variant": "m02",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "- main[0]{class=app id=app}\n- span[1]{class=badge data-testid=items-left id=items-left}\n- form[1]{class=composer data-testid=composer id=composer}\n- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- button[1]{class=btn btn-primary data-testid=add-task id=add-task type=submit text=Add}\n- input[0]{class=search-input data-testid=search id=search placeholder=Search tasks type=search}\n- div[1]{aria-label=Filter tasks class=filters data-testid=filters id=filters role=group}\n- ul[3]{class=task-list data-testid=task-list id=task-list}\n- p[4]{class=empty-state data-testid=empty-state hidden= id=empty-state}\n- button[0]{class=btn btn-ghost data-testid=clear-completed id=clear-completed type=button text=Clear completed}\n+ main[0]{class=app}\n+ span[1]{class=badge data-testid=items-left}\n+ form[1]{class=composer data-testid=composer}\n+ input[0]{class=composer-input data-testid=new-task-input placeholder=What needs doing? type=text}\n+ button[1]{class=btn btn-primary data-testid=add-task type=submit text=Add}\n+ input[0]{class=search-input data-testid=search placeholder=Search tasks type=search}\n+ div[1]{aria-label=Filter tasks class=filters data-testid=filters role=group}\n+ ul[3]{class=task-list data-testid=task-list}\n+ p[4]{class=empty-state data-testid=empty-state hidden=}\n+ button[0]{class=btn btn-ghost data-testid=clear-completed type=button text=Clear completed}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 2184,
+      "completionTokens": 231,
+      "latencyMs": 12268
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\k3\\agent\\m02\\tests",
+  "modelCalls": 1,
+  "promptTokens": 2184,
+  "completionTokens": 231,
+  "escalationReport": null,
+  "error": null
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taskly</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app" id="app">
+      <header class="app-header">
+        <h1 class="app-title">Taskly</h1>
+        <span class="badge" id="items-left" data-testid="items-left">2 tareas pendientes</span>
+      </header>
+
+      <form class="composer" id="composer" data-testid="composer">
+        <input class="composer-input" id="new-task" data-testid="new-task-input" type="text" placeholder="¿Qué hay que hacer?" autocomplete="off">
+        <button class="btn btn-primary" id="add-task" data-testid="add-task" type="submit">Añadir</button>
+      </form>
+
+      <div class="toolbar">
+        <input class="search-input" id="search" data-testid="search" type="search" placeholder="Buscar tareas" autocomplete="off">
+        <div class="filters" id="filters" data-testid="filters" role="group" aria-label="Filtrar tareas">
+          <button class="filter is-active" data-testid="filter-all" data-filter="all" type="button">Todas</button>
+          <button class="filter" data-testid="filter-active" data-filter="active" type="button">Activas</button>
+          <button class="filter" data-testid="filter-completed" data-filter="completed" type="button">Completadas</button>
+        </div>
+      </div>
+
+      <ul class="task-list" id="task-list" data-testid="task-list"></ul>
+
+      <p class="empty-state" id="empty-state" data-testid="empty-state" hidden="">No hay nada.</p>
+
+      <footer class="app-footer">
+        <button class="btn btn-ghost" id="clear-completed" data-testid="clear-completed" type="button">Borrar completadas</button>
+      </footer>
+    </main>
+
+    <!--
+      Row markup. app.js lifts the inner HTML at mount and removes this container, so it never
+      appears in the rendered page. It lives in the document (rather than in a JS string) so that
+      DOM mutations can reach the row template the same way they reach the rest of the markup.
+    -->
+    <div id="task-template" hidden="">
+      <li class="task-item" data-testid="task-item">
+        <input class="task-toggle" data-testid="task-toggle" type="checkbox">
+        <span class="task-title" data-testid="task-title"></span>
+        <button class="task-delete" data-testid="task-delete" type="button">Eliminar</button>
+      </li>
+    </div>
+
+    <script src="./app.js"></script>
+  
+
+</body></html>

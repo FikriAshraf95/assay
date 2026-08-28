@@ -1,0 +1,31 @@
+{
+  "caseId": "h03",
+  "kind": "heal",
+  "primarySpec": "items-left.spec.ts",
+  "variant": "h03",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "+ span[0]{class=count}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 1839,
+      "completionTokens": 103,
+      "latencyMs": 989
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\hollow-v1\\agent\\h03\\tests",
+  "modelCalls": 1,
+  "promptTokens": 1839,
+  "completionTokens": 103,
+  "escalationReport": null,
+  "error": null
+}

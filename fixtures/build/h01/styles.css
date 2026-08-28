@@ -1,0 +1,209 @@
+:root {
+  --bg: #f6f6f4;
+  --surface: #ffffff;
+  --border: #e2e1dd;
+  --text: #1b1b19;
+  --muted: #6f6d67;
+  --accent: #b5533a;
+  --accent-text: #ffffff;
+  --done: #9a988f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17171a;
+    --surface: #1f1f23;
+    --border: #32323a;
+    --text: #ececea;
+    --muted: #98968f;
+    --accent: #d4795e;
+    --accent-text: #17171a;
+    --done: #6a6862;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3rem 1rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.app {
+  max-width: 34rem;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.app-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.badge {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.composer {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.composer-input,
+.search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: inherit;
+  font: inherit;
+}
+
+.composer-input:focus-visible,
+.search-input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.btn {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.filter {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.filter.is-active {
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-item.is-completed .task-title {
+  color: var(--done);
+  text-decoration: line-through;
+}
+
+.task-delete {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.task-delete svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.empty-state {
+  color: var(--muted);
+  font-size: 0.875rem;
+  padding: 0.75rem 0.2rem;
+  margin: 0;
+}
+
+.app-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-items {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+}
+
+
+.task-inner { display: flex; align-items: center; gap: 0.7rem; width: 100%; }

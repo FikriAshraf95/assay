@@ -1,0 +1,95 @@
+﻿
+> assay@0.1.0 eval
+> tsx src/eval/run.ts
+
+no baseline run found for this id — running it now
+
+baseline — run k3
+model: kimi-k3
+
+m01 delete-task.spec.ts        patched      1626+448 tok, 15937ms
+m02 add-task.spec.ts           patched      1406+232 tok, 12120ms
+m03 complete-task.spec.ts      patched      1508+901 tok, 68202ms
+m04 add-validation.spec.ts     patched      1447+256 tok, 13670ms
+m05 complete-task.spec.ts      patched      1522+949 tok, 29086ms
+m06 empty-state.spec.ts        patched      1549+484 tok, 13760ms
+m07 delete-task.spec.ts        patched      1817+317 tok, 10292ms
+m08 add-task.spec.ts           patched      1460+325 tok, 16877ms
+m09 add-task.spec.ts           patched      1594+245 tok, 10161ms
+m10 filter-active.spec.ts      patched      1468+264 tok, 7614ms
+m11 filter-completed.spec.ts   patched      1500+286 tok, 14465ms
+m12 add-task.spec.ts           patched      1624+542 tok, 23831ms
+n01 clear-completed.spec.ts    refused      1427+1317 tok, 44679ms
+n02 delete-task.spec.ts        refused      1643+3936 tok, 118793ms
+n03 items-left.spec.ts         refused      1507+1207 tok, 37596ms
+
+12 patched, 3 refused, 0 unparseable, 0 errors
+tokens: 23,098 in / 11,709 out
+models served: kimi-k3
+
+wrote D:\Works\ai\competition\assay\results\runs\k3\baseline
+
+no agent run found for this id — running it now
+
+agent — run k3
+model: kimi-k3
+
+m01 delete-task.spec.ts        accepted-guarded   1 call(s), 2986+385 tok
+m02 add-task.spec.ts           accepted-guarded   1 call(s), 2184+231 tok
+m03 complete-task.spec.ts      accepted-guarded   1 call(s), 2974+728 tok
+m04 add-validation.spec.ts     accepted-unguarded 1 call(s), 1867+194 tok
+m05 complete-task.spec.ts      accepted-guarded   1 call(s), 2108+514 tok
+m06 empty-state.spec.ts        accepted-guarded   1 call(s), 2051+346 tok
+m07 delete-task.spec.ts        accepted-guarded   1 call(s), 2367+199 tok
+m08 add-task.spec.ts           accepted-guarded   1 call(s), 1955+438 tok
+m09 add-task.spec.ts           accepted-guarded   1 call(s), 2180+349 tok
+m10 filter-active.spec.ts      accepted-guarded   1 call(s), 2429+232 tok
+m11 filter-completed.spec.ts   accepted-guarded   2 call(s), 4554+530 tok
+m12 add-task.spec.ts           accepted-guarded   1 call(s), 2004+489 tok
+n01 clear-completed.spec.ts    refused-model      1 call(s), 1815+171 tok
+n02 delete-task.spec.ts        refused-triage   (0 model calls)
+n03 items-left.spec.ts         refused-triage   (0 model calls)
+
+accepted 11 guarded / 1 unguarded, refused 2 triage / 1 model, escalated 0, errors 0
+tokens: 31,474 in / 4,806 out over 14 call(s)
+
+wrote D:\Works\ai\competition\assay\results\runs\k3\agent
+
+scoring run k3 — model kimi-k3
+
+case  baseline            agent
+────────────────────────────────────────────────────
+m01    valid-heal          valid-heal
+m02    valid-heal          valid-heal
+m03    valid-heal          valid-heal
+m04    valid-heal          valid-heal
+m05    valid-heal          valid-heal
+m06    valid-heal          valid-heal
+m07    valid-heal          valid-heal
+m08    valid-heal          valid-heal
+m09    valid-heal          valid-heal
+m10    valid-heal          valid-heal
+m11    valid-heal          valid-heal
+m12    valid-heal          valid-heal
+n01    correct-refusal     correct-refusal
+n02    correct-refusal     correct-refusal
+n03    correct-refusal     correct-refusal
+
+────────────────────────────────────────────────────────────────────────
+metric                              baseline     agent      change
+────────────────────────────────────────────────────────────────────────
+Valid heal rate (12 heal cases)       100.0%    100.0%     0.0 pts  
+Correct refusal rate (3 no-heal)      100.0%    100.0%     0.0 pts  
+Correct action rate (all 15)          100.0%    100.0%     0.0 pts  
+False heal rate (all 15)                0.0%      0.0%     0.0 pts  
+Pass rate — the misleading one         80.0%     80.0%     0.0 pts  
+────────────────────────────────────────────────────────────────────────
+valid heal rate  baseline ████████████████████
+                 agent    ████████████████████
+
+tokens   baseline 34,807   agent 36,280
+calls    baseline 15   agent 14   (agent spends more per case and refuses without spending at all)
+handed to a human   baseline 3   agent 3
+
+wrote D:\Works\ai\competition\assay\results\runs\k3\comparison.json
+run `npm run report` to render the reviewable HTML report

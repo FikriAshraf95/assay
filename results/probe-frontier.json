@@ -1,0 +1,80 @@
+{
+  "at": "2026-08-28T17:16:05.395Z",
+  "config": {
+    "provider": "frontier",
+    "primaryModel": "kimi-k3",
+    "primaryBaseUrl": "https://api.moonshot.ai/v1",
+    "fallbackModel": "ilmu-nemo-nano",
+    "fallbackEnabled": false,
+    "temperature": "1",
+    "maxTokens": "4096"
+  },
+  "results": [
+    {
+      "name": "reachability",
+      "asks": "endpoint responds and follows an exact-output instruction",
+      "passed": true,
+      "errored": false,
+      "detail": "replied \"READY\"",
+      "latencyMs": 5851,
+      "promptTokens": 95,
+      "completionTokens": 48,
+      "model": "kimi-k3"
+    },
+    {
+      "name": "determinism (run 1)",
+      "asks": "temperature 0 is honoured",
+      "passed": true,
+      "errored": false,
+      "detail": "\"red, yellow, blue\"",
+      "latencyMs": 5159,
+      "promptTokens": 99,
+      "completionTokens": 113,
+      "model": "kimi-k3"
+    },
+    {
+      "name": "determinism (run 2)",
+      "asks": "identical output for identical input",
+      "passed": false,
+      "errored": false,
+      "detail": "DIFFERS from run 1",
+      "latencyMs": 5871,
+      "promptTokens": 99,
+      "completionTokens": 119,
+      "model": "kimi-k3"
+    },
+    {
+      "name": "code-fence repair",
+      "asks": "returns a complete spec file in a fenced block",
+      "passed": true,
+      "errored": false,
+      "detail": "13-line file returned",
+      "latencyMs": 15462,
+      "promptTokens": 947,
+      "completionTokens": 329,
+      "model": "kimi-k3"
+    },
+    {
+      "name": "html comprehension",
+      "asks": "can answer about a page held in context",
+      "passed": true,
+      "errored": false,
+      "detail": "answered \"Add an item\"",
+      "latencyMs": 15714,
+      "promptTokens": 790,
+      "completionTokens": 106,
+      "model": "kimi-k3"
+    },
+    {
+      "name": "refusal capability",
+      "asks": "will decline to patch when the feature is absent",
+      "passed": true,
+      "errored": false,
+      "detail": "correctly refused",
+      "latencyMs": 16642,
+      "promptTokens": 911,
+      "completionTokens": 331,
+      "model": "kimi-k3"
+    }
+  ]
+}

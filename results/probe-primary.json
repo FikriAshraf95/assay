@@ -1,0 +1,73 @@
+{
+  "at": "2026-08-28T16:10:25.128Z",
+  "config": {
+    "primaryModel": "nemo-super",
+    "primaryBaseUrl": "https://api.ilmu.ai/v1",
+    "fallbackModel": "ilmu-nemo-nano",
+    "fallbackEnabled": false,
+    "temperature": "0",
+    "maxTokens": "4096"
+  },
+  "results": [
+    {
+      "name": "reachability",
+      "asks": "endpoint responds and follows an exact-output instruction",
+      "passed": true,
+      "detail": "replied \"READY\"",
+      "latencyMs": 269,
+      "promptTokens": 36,
+      "completionTokens": 3,
+      "model": "nemo-super"
+    },
+    {
+      "name": "determinism (run 1)",
+      "asks": "temperature 0 is honoured",
+      "passed": true,
+      "detail": "\"red, blue, yellow\"",
+      "latencyMs": 209,
+      "promptTokens": 40,
+      "completionTokens": 6,
+      "model": "nemo-super"
+    },
+    {
+      "name": "determinism (run 2)",
+      "asks": "identical output for identical input",
+      "passed": true,
+      "detail": "identical to run 1",
+      "latencyMs": 151,
+      "promptTokens": 40,
+      "completionTokens": 6,
+      "model": "nemo-super"
+    },
+    {
+      "name": "code-fence repair",
+      "asks": "returns a complete spec file in a fenced block",
+      "passed": true,
+      "detail": "13-line file returned",
+      "latencyMs": 1060,
+      "promptTokens": 881,
+      "completionTokens": 118,
+      "model": "nemo-super"
+    },
+    {
+      "name": "html comprehension",
+      "asks": "can answer about a page held in context",
+      "passed": true,
+      "detail": "answered \"Add an item\"",
+      "latencyMs": 303,
+      "promptTokens": 737,
+      "completionTokens": 4,
+      "model": "nemo-super"
+    },
+    {
+      "name": "refusal capability",
+      "asks": "will decline to patch when the feature is absent",
+      "passed": false,
+      "detail": "attempted a repair instead: \"```ts\\nimport { expect, test } from '@playwright/test';\\n\\n/** \"",
+      "latencyMs": 948,
+      "promptTokens": 847,
+      "completionTokens": 103,
+      "model": "nemo-super"
+    }
+  ]
+}

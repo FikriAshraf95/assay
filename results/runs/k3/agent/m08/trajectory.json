@@ -1,0 +1,31 @@
+{
+  "caseId": "m08",
+  "kind": "heal",
+  "primarySpec": "add-task.spec.ts",
+  "variant": "m08",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- button[1]{class=btn btn-primary data-testid=add-task id=add-task type=submit text=Add}\n+ label[0]{class=composer-label text=New task}\n+ input[1]{class=composer-input data-testid=new-task-input id=new-task placeholder=Add an item type=text}\n+ button[2]{class=btn btn-primary data-testid=add-task id=add-task type=submit text=Add}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 1955,
+      "completionTokens": 438,
+      "latencyMs": 45699
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\k3\\agent\\m08\\tests",
+  "modelCalls": 1,
+  "promptTokens": 1955,
+  "completionTokens": 438,
+  "escalationReport": null,
+  "error": null
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "m05",
+  "kind": "heal",
+  "primarySpec": "complete-task.spec.ts",
+  "variant": "m05",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "failureKind": "unresolved-locator",
+    "structureChanged": true,
+    "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+    "structureSummary": "- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n+ div[0]{class=task-row}\n+ div[0]{class=task-main}\n+ div[1]{class=task-actions}\n+ button[0]{class=task-delete data-testid=task-delete type=button}\n+ div[0]{class=task-row}\n+ div[0]{class=task-main}\n+ div[1]{class=task-actions}\n+ button[0]{class=task-delete data-testid=task-delete type=button}\n+ div[0]{class=task-row}\n+ div[0]{class=task-main}\n+ div[1]{class=task-actions}\n+ button[0]{class=task-delete data-testid=task-delete type=button}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 2045,
+      "completionTokens": 128,
+      "latencyMs": 1240
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m05\\tests",
+  "modelCalls": 1,
+  "promptTokens": 2045,
+  "completionTokens": 128,
+  "escalationReport": null,
+  "error": null
+}

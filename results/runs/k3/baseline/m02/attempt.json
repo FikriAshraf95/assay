@@ -1,0 +1,14 @@
+{
+  "caseId": "m02",
+  "kind": "heal",
+  "primarySpec": "add-task.spec.ts",
+  "variant": "m02",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\k3\\baseline\\m02\\tests",
+  "model": "kimi-k3",
+  "usedFallback": false,
+  "promptTokens": 1406,
+  "completionTokens": 232,
+  "latencyMs": 12120,
+  "error": null
+}

@@ -1,0 +1,21 @@
+{
+  "caseId": "m04",
+  "kind": "heal",
+  "primarySpec": "add-validation.spec.ts",
+  "variant": "m04",
+  "outcome": "refused-triage",
+  "triage": {
+    "verdict": "refuse",
+    "failureKind": "assertion-mismatch",
+    "structureChanged": false,
+    "reason": "Every locator still resolves and the page structure is unchanged from the last known-good build. Nothing moved, so the test is not broken — the application is. Repairing the test here would delete a real bug detection.",
+    "structureSummary": "No structural difference from the last known-good build."
+  },
+  "attempts": [],
+  "patchedTestDir": null,
+  "modelCalls": 0,
+  "promptTokens": 0,
+  "completionTokens": 0,
+  "escalationReport": "**Suspected regression in the application, not the test.**\n\nEvery locator still resolves and the page structure is unchanged from the last known-good build. Nothing moved, so the test is not broken — the application is. Repairing the test here would delete a real bug detection.\n\nNo repair was attempted and no model was consulted. A person should look at the\napplication before this test is touched.",
+  "error": null
+}

@@ -1,0 +1,568 @@
+{
+  "runId": "2026-08-28T16-30-50-344Z",
+  "system": "agent",
+  "at": "2026-08-28T16:38:58.041Z",
+  "config": {
+    "primaryModel": "nemo-super",
+    "primaryBaseUrl": "https://api.ilmu.ai/v1",
+    "fallbackModel": "ilmu-nemo-nano",
+    "fallbackEnabled": false,
+    "temperature": "0",
+    "maxTokens": "4096"
+  },
+  "modelsSeen": [
+    "nemo-super"
+  ],
+  "totals": {
+    "cases": 15,
+    "acceptedGuarded": 10,
+    "acceptedUnguarded": 0,
+    "refusedTriage": 2,
+    "refusedModel": 0,
+    "escalated": 3,
+    "errors": 0,
+    "modelCalls": 21,
+    "promptTokens": 51041,
+    "completionTokens": 2669
+  },
+  "results": [
+    {
+      "caseId": "m01",
+      "kind": "heal",
+      "primarySpec": "delete-task.spec.ts",
+      "variant": "m01",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "unresolved-locator",
+        "structureChanged": true,
+        "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+        "structureSummary": "- span[1]{class=badge data-testid=items-left id=items-left}\n- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- input[0]{class=search-input data-testid=search id=search placeholder=Search tasks type=search}\n- button[0]{class=filter is-active data-filter=all data-testid=filter-all type=button}\n- button[1]{class=filter data-filter=active data-testid=filter-active type=button}\n- button[2]{class=filter data-filter=completed data-testid=filter-completed type=button}\n- ul[3]{class=task-list data-testid=task-list id=task-list}\n- li[0]{class=task-item data-task-id=1 data-testid=task-item}\n- input[0]{aria-label=Toggle Write the reproduction guide class=task-toggle data-testid=task-toggle type=checkbox}\n- span[1]{class=task-title data-testid=task-title}\n- span[1]{class=task-title data-testid=task-title}\n- span[1]{class=task-title data-testid=task-title}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- li[1]{class=task-item data-task-id=2 data-testid=task-item}\n- input[0]{aria-label=Toggle Record the demo video class=task-toggle data-testid=task-toggle type=checkbox}\n- li[2]{class=task-item is-completed data-task-id=3 data-testid=task-item}\n- input[0]{aria-label=Toggle Pin the evaluation set class=task-toggle data-testid=task-toggle type=checkbox}\n- p[4]{class=empty-state data-testid=empty-state hidden= id=empty-state}\n+ span[1]{class=bdg-6f1c33 data-testid=items-left id=items-left}\n+ input[0]{class=cmp-51fa2c data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n+ input[0]{class=cmp-77b1e0 data-testid=search id=search placeholder=Search tasks type=search}\n+ button[0]{class=flt-8823ac flt-ac7v01 data-filter=all data-testid=filter-all type=button}\n+ button[1]{class=flt-8823ac data-filter=active data-testid=filter-active type=button}\n+ button[2]{class=flt-8823ac data-filter=completed data-testid=filter-completed type=button}\n+ ul[3]{class=lst-19ffab data-testid=task-list id=task-list}\n+ li[0]{class=tsk-4f2a91 data-task-id=1 data-testid=task-item}\n+ input[0]{aria-label=Toggle Write the reproduction guide class=tsk-01ab4e data-testid=task-toggle type=checkbox}\n+ span[1]{class=tsk-9c31b0 data-testid=task-title}\n+ button[2]{class=tsk-77de12 data-testid=task-delete type=button}\n+ li[1]{class=tsk-4f2a91 data-task-id=2 data-testid=task-item}\n+ input[0]{aria-label=Toggle Record the demo video class=tsk-01ab4e data-testid=task-toggle type=checkbox}\n+ span[1]{class=tsk-9c31b0 data-testid=task-title}\n+ button[2]{class=tsk-77de12 data-testid=task-delete type=button}\n+ li[2]{class=tsk-4f2a91 tsk-c0mpl3 data-task-id=3 data-testid=task-item}\n+ input[0]{aria-label=Toggle Pin the evaluation set class=tsk-01ab4e data-testid=task-toggle type=checkbox}\n+ span[1]{class=tsk-9c31b0 data-testid=task-title}\n+ button[2]{class=tsk-77de12 data-testid=task-delete type=button}\n+ p[4]{class=emp-4a2d90 data-testid=empty-state hidden= id=empty-state}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 2974,
+          "completionTokens": 147,
+          "latencyMs": 1485
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m01\\tests",
+      "modelCalls": 1,
+      "promptTokens": 2974,
+      "completionTokens": 147,
+      "escalationReport": null,
+      "error": null
+    },
+    {
+      "caseId": "m02",
+      "kind": "heal",
+      "primarySpec": "add-task.spec.ts",
+      "variant": "m02",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "unresolved-locator",
+        "structureChanged": true,
+        "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+        "structureSummary": "- main[0]{class=app id=app}\n- span[1]{class=badge data-testid=items-left id=items-left}\n- form[1]{class=composer data-testid=composer id=composer}\n- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- button[1]{class=btn btn-primary data-testid=add-task id=add-task type=submit}\n- input[0]{class=search-input data-testid=search id=search placeholder=Search tasks type=search}\n- div[1]{aria-label=Filter tasks class=filters data-testid=filters id=filters role=group}\n- ul[3]{class=task-list data-testid=task-list id=task-list}\n- p[4]{class=empty-state data-testid=empty-state hidden= id=empty-state}\n- button[0]{class=btn btn-ghost data-testid=clear-completed id=clear-completed type=button}\n+ main[0]{class=app}\n+ span[1]{class=badge data-testid=items-left}\n+ form[1]{class=composer data-testid=composer}\n+ input[0]{class=composer-input data-testid=new-task-input placeholder=What needs doing? type=text}\n+ button[1]{class=btn btn-primary data-testid=add-task type=submit}\n+ input[0]{class=search-input data-testid=search placeholder=Search tasks type=search}\n+ div[1]{aria-label=Filter tasks class=filters data-testid=filters role=group}\n+ ul[3]{class=task-list data-testid=task-list}\n+ p[4]{class=empty-state data-testid=empty-state hidden=}\n+ button[0]{class=btn btn-ghost data-testid=clear-completed type=button}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 2142,
+          "completionTokens": 123,
+          "latencyMs": 1114
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m02\\tests",
+      "modelCalls": 1,
+      "promptTokens": 2142,
+      "completionTokens": 123,
+      "escalationReport": null,
+      "error": null
+    },
+    {
+      "caseId": "m03",
+      "kind": "heal",
+      "primarySpec": "complete-task.spec.ts",
+      "variant": "m03",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "unresolved-locator",
+        "structureChanged": true,
+        "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+        "structureSummary": "- span[1]{class=badge data-testid=items-left id=items-left}\n- form[1]{class=composer data-testid=composer id=composer}\n- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- button[1]{class=btn btn-primary data-testid=add-task id=add-task type=submit}\n- input[0]{class=search-input data-testid=search id=search placeholder=Search tasks type=search}\n- div[1]{aria-label=Filter tasks class=filters data-testid=filters id=filters role=group}\n- button[0]{class=filter is-active data-filter=all data-testid=filter-all type=button}\n- button[1]{class=filter data-filter=active data-testid=filter-active type=button}\n- button[2]{class=filter data-filter=completed data-testid=filter-completed type=button}\n- ul[3]{class=task-list data-testid=task-list id=task-list}\n- li[0]{class=task-item data-task-id=1 data-testid=task-item}\n- input[0]{aria-label=Toggle Write the reproduction guide class=task-toggle data-testid=task-toggle type=checkbox}\n- span[1]{class=task-title data-testid=task-title}\n- span[1]{class=task-title data-testid=task-title}\n- span[1]{class=task-title data-testid=task-title}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- li[1]{class=task-item data-task-id=2 data-testid=task-item}\n- input[0]{aria-label=Toggle Record the demo video class=task-toggle data-testid=task-toggle type=checkbox}\n- li[2]{class=task-item is-completed data-task-id=3 data-testid=task-item}\n- input[0]{aria-label=Toggle Pin the evaluation set class=task-toggle data-testid=task-toggle type=checkbox}\n- p[4]{class=empty-state data-testid=empty-state hidden= id=empty-state}\n- button[0]{class=btn btn-ghost data-testid=clear-completed id=clear-completed type=button}\n+ span[1]{class=badge data-qa=items-left id=items-left}\n+ form[1]{class=composer data-qa=composer id=composer}\n+ input[0]{class=composer-input data-qa=new-task-input id=new-task placeholder=What needs doing? type=text}\n+ button[1]{class=btn btn-primary data-qa=add-task id=add-task type=submit}\n+ input[0]{class=search-input data-qa=search id=search placeholder=Search tasks type=search}\n+ div[1]{aria-label=Filter tasks class=filters data-qa=filters id=filters role=group}\n+ button[0]{class=filter is-active data-filter=all data-qa=filter-all type=button}\n+ button[1]{class=filter data-filter=active data-qa=filter-active type=button}\n+ button[2]{class=filter data-filter=completed data-qa=filter-completed type=button}\n+ ul[3]{class=task-list data-qa=task-list id=task-list}\n+ li[0]{class=task-item data-qa=task-item data-task-id=1}\n+ input[0]{aria-label=Toggle Write the reproduction guide class=task-toggle data-qa=task-toggle type=checkbox}\n+ span[1]{class=task-title data-qa=task-title}\n+ button[2]{class=task-delete data-qa=task-delete type=button}\n+ li[1]{class=task-item data-qa=task-item data-task-id=2}\n+ input[0]{aria-label=Toggle Record the demo video class=task-toggle data-qa=task-toggle type=checkbox}\n+ span[1]{class=task-title data-qa=task-title}\n+ button[2]{class=task-delete data-qa=task-delete type=button}\n+ li[2]{class=task-item is-completed data-qa=task-item data-task-id=3}\n+ input[0]{aria-label=Toggle Pin the evaluation set class=task-toggle data-qa=task-toggle type=checkbox}\n+ span[1]{class=task-title data-qa=task-title}\n+ button[2]{class=task-delete data-qa=task-delete type=button}\n+ p[4]{class=empty-state data-qa=empty-state hidden= id=empty-state}\n+ button[0]{class=btn btn-ghost data-qa=clear-completed id=clear-completed type=button}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 2885,
+          "completionTokens": 120,
+          "latencyMs": 1188
+        },
+        {
+          "attempt": 2,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 3529,
+          "completionTokens": 123,
+          "latencyMs": 1117
+        },
+        {
+          "attempt": 3,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 3584,
+          "completionTokens": 123,
+          "latencyMs": 1125
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m03\\tests",
+      "modelCalls": 3,
+      "promptTokens": 9998,
+      "completionTokens": 366,
+      "escalationReport": null,
+      "error": null
+    },
+    {
+      "caseId": "m04",
+      "kind": "heal",
+      "primarySpec": "add-validation.spec.ts",
+      "variant": "m04",
+      "outcome": "refused-triage",
+      "triage": {
+        "verdict": "refuse",
+        "failureKind": "assertion-mismatch",
+        "structureChanged": false,
+        "reason": "Every locator still resolves and the page structure is unchanged from the last known-good build. Nothing moved, so the test is not broken — the application is. Repairing the test here would delete a real bug detection.",
+        "structureSummary": "No structural difference from the last known-good build."
+      },
+      "attempts": [],
+      "patchedTestDir": null,
+      "modelCalls": 0,
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "escalationReport": "**Suspected regression in the application, not the test.**\n\nEvery locator still resolves and the page structure is unchanged from the last known-good build. Nothing moved, so the test is not broken — the application is. Repairing the test here would delete a real bug detection.\n\nNo repair was attempted and no model was consulted. A person should look at the\napplication before this test is touched.",
+      "error": null
+    },
+    {
+      "caseId": "m05",
+      "kind": "heal",
+      "primarySpec": "complete-task.spec.ts",
+      "variant": "m05",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "unresolved-locator",
+        "structureChanged": true,
+        "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+        "structureSummary": "- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n+ div[0]{class=task-row}\n+ div[0]{class=task-main}\n+ div[1]{class=task-actions}\n+ button[0]{class=task-delete data-testid=task-delete type=button}\n+ div[0]{class=task-row}\n+ div[0]{class=task-main}\n+ div[1]{class=task-actions}\n+ button[0]{class=task-delete data-testid=task-delete type=button}\n+ div[0]{class=task-row}\n+ div[0]{class=task-main}\n+ div[1]{class=task-actions}\n+ button[0]{class=task-delete data-testid=task-delete type=button}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 2045,
+          "completionTokens": 128,
+          "latencyMs": 1240
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m05\\tests",
+      "modelCalls": 1,
+      "promptTokens": 2045,
+      "completionTokens": 128,
+      "escalationReport": null,
+      "error": null
+    },
+    {
+      "caseId": "m06",
+      "kind": "heal",
+      "primarySpec": "empty-state.spec.ts",
+      "variant": "m06",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "assertion-mismatch",
+        "structureChanged": true,
+        "reason": "Every locator resolved, but the page structure differs from the last known-good build — a locator is very likely resolving to the wrong element.",
+        "structureSummary": "- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n+ a[2]{class=task-delete data-testid=task-delete href=# role=button}\n+ a[2]{class=task-delete data-testid=task-delete href=# role=button}\n+ a[2]{class=task-delete data-testid=task-delete href=# role=button}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 2004,
+          "completionTokens": 167,
+          "latencyMs": 1485
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m06\\tests",
+      "modelCalls": 1,
+      "promptTokens": 2004,
+      "completionTokens": 167,
+      "escalationReport": null,
+      "error": null
+    },
+    {
+      "caseId": "m07",
+      "kind": "heal",
+      "primarySpec": "delete-task.spec.ts",
+      "variant": "m07",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "unresolved-locator",
+        "structureChanged": true,
+        "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+        "structureSummary": "- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n- button[2]{class=task-delete data-testid=task-delete type=button}\n+ button[2]{aria-label=Remove class=task-delete data-testid=task-delete type=button}\n+ svg[0]{aria-hidden=true}\n+ path[0]{}\n+ button[2]{aria-label=Remove class=task-delete data-testid=task-delete type=button}\n+ svg[0]{aria-hidden=true}\n+ path[0]{}\n+ button[2]{aria-label=Remove class=task-delete data-testid=task-delete type=button}\n+ svg[0]{aria-hidden=true}\n+ path[0]{}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 2319,
+          "completionTokens": 148,
+          "latencyMs": 1409
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m07\\tests",
+      "modelCalls": 1,
+      "promptTokens": 2319,
+      "completionTokens": 148,
+      "escalationReport": null,
+      "error": null
+    },
+    {
+      "caseId": "m08",
+      "kind": "heal",
+      "primarySpec": "add-task.spec.ts",
+      "variant": "m08",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "assertion-mismatch",
+        "structureChanged": true,
+        "reason": "Every locator resolved, but the page structure differs from the last known-good build — a locator is very likely resolving to the wrong element.",
+        "structureSummary": "- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- button[1]{class=btn btn-primary data-testid=add-task id=add-task type=submit}\n+ label[0]{class=composer-label}\n+ input[1]{class=composer-input data-testid=new-task-input id=new-task placeholder=Add an item type=text}\n+ button[2]{class=btn btn-primary data-testid=add-task id=add-task type=submit}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 1928,
+          "completionTokens": 118,
+          "latencyMs": 1125
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m08\\tests",
+      "modelCalls": 1,
+      "promptTokens": 1928,
+      "completionTokens": 118,
+      "escalationReport": null,
+      "error": null
+    },
+    {
+      "caseId": "m09",
+      "kind": "heal",
+      "primarySpec": "add-task.spec.ts",
+      "variant": "m09",
+      "outcome": "escalated",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "unresolved-locator",
+        "structureChanged": true,
+        "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+        "structureSummary": "- form[1]{class=composer data-testid=composer id=composer}\n- div[2]{class=toolbar}\n- ul[3]{class=task-list data-testid=task-list id=task-list}\n- p[4]{class=empty-state data-testid=empty-state hidden= id=empty-state}\n- footer[5]{class=app-footer}\n+ div[1]{class=quick-add data-testid=quick-add}\n+ input[0]{class=composer-input placeholder=What needs doing? type=text}\n+ button[1]{class=btn btn-primary type=button}\n+ form[2]{class=composer data-testid=composer id=composer}\n+ div[3]{class=toolbar}\n+ ul[4]{class=task-list data-testid=task-list id=task-list}\n+ p[5]{class=empty-state data-testid=empty-state hidden= id=empty-state}\n+ footer[6]{class=app-footer}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 2148,
+          "completionTokens": 141,
+          "latencyMs": 1326
+        },
+        {
+          "attempt": 2,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 2947,
+          "completionTokens": 141,
+          "latencyMs": 1313
+        },
+        {
+          "attempt": 3,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 2947,
+          "completionTokens": 141,
+          "latencyMs": 1393
+        }
+      ],
+      "patchedTestDir": null,
+      "modelCalls": 3,
+      "promptTokens": 8042,
+      "completionTokens": 423,
+      "escalationReport": "**No repair could be verified after 3 attempt(s).**\n\nNo candidate repair passed against the application. The control this test needs may have been removed rather than moved, which is a product decision rather than a repair.\n\nA person should decide whether this test should be rewritten, retargeted or deleted.",
+      "error": null
+    },
+    {
+      "caseId": "m10",
+      "kind": "heal",
+      "primarySpec": "filter-active.spec.ts",
+      "variant": "m10",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "assertion-mismatch",
+        "structureChanged": true,
+        "reason": "Every locator resolved, but the page structure differs from the last known-good build — a locator is very likely resolving to the wrong element.",
+        "structureSummary": "- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- input[0]{class=search-input data-testid=search id=search placeholder=Search tasks type=search}\n- div[1]{aria-label=Filter tasks class=filters data-testid=filters id=filters role=group}\n+ input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=¿Qué hay que hacer? type=text}\n+ input[0]{class=search-input data-testid=search id=search placeholder=Buscar tareas type=search}\n+ div[1]{aria-label=Filtrar tareas class=filters data-testid=filters id=filters role=group}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 1974,
+          "completionTokens": 110,
+          "latencyMs": 1138
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m10\\tests",
+      "modelCalls": 1,
+      "promptTokens": 1974,
+      "completionTokens": 110,
+      "escalationReport": null,
+      "error": null
+    },
+    {
+      "caseId": "m11",
+      "kind": "heal",
+      "primarySpec": "filter-completed.spec.ts",
+      "variant": "m11",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "assertion-mismatch",
+        "structureChanged": true,
+        "reason": "Every locator resolved, but the page structure differs from the last known-good build — a locator is very likely resolving to the wrong element.",
+        "structureSummary": "- button[0]{class=filter is-active data-filter=all data-testid=filter-all type=button}\n- button[2]{class=filter data-filter=completed data-testid=filter-completed type=button}\n+ button[0]{class=filter data-filter=completed data-testid=filter-completed type=button}\n+ button[2]{class=filter is-active data-filter=all data-testid=filter-all type=button}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 1926,
+          "completionTokens": 95,
+          "latencyMs": 1030
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m11\\tests",
+      "modelCalls": 1,
+      "promptTokens": 1926,
+      "completionTokens": 95,
+      "escalationReport": null,
+      "error": null
+    },
+    {
+      "caseId": "m12",
+      "kind": "heal",
+      "primarySpec": "add-task.spec.ts",
+      "variant": "m12",
+      "outcome": "escalated",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "unresolved-locator",
+        "structureChanged": true,
+        "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+        "structureSummary": "+ details[1]{class=composer-shell}\n+ summary[0]{class=composer-summary}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 1979,
+          "completionTokens": 119,
+          "latencyMs": 1141
+        },
+        {
+          "attempt": 2,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 2730,
+          "completionTokens": 145,
+          "latencyMs": 1336
+        },
+        {
+          "attempt": 3,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 2604,
+          "completionTokens": 145,
+          "latencyMs": 1325
+        }
+      ],
+      "patchedTestDir": null,
+      "modelCalls": 3,
+      "promptTokens": 7313,
+      "completionTokens": 409,
+      "escalationReport": "**No repair could be verified after 3 attempt(s).**\n\nNo candidate repair passed against the application. The control this test needs may have been removed rather than moved, which is a product decision rather than a repair.\n\nA person should decide whether this test should be rewritten, retargeted or deleted.",
+      "error": null
+    },
+    {
+      "caseId": "n01",
+      "kind": "no-heal",
+      "primarySpec": "clear-completed.spec.ts",
+      "variant": "n01",
+      "outcome": "escalated",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "assertion-mismatch",
+        "structureChanged": true,
+        "reason": "Every locator resolved, but the page structure differs from the last known-good build — a locator is very likely resolving to the wrong element.",
+        "structureSummary": "- button[0]{class=btn btn-ghost data-testid=clear-completed id=clear-completed type=button}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 1780,
+          "completionTokens": 110,
+          "latencyMs": 1093
+        },
+        {
+          "attempt": 2,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 2378,
+          "completionTokens": 110,
+          "latencyMs": 1018
+        },
+        {
+          "attempt": 3,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 2378,
+          "completionTokens": 110,
+          "latencyMs": 993
+        }
+      ],
+      "patchedTestDir": null,
+      "modelCalls": 3,
+      "promptTokens": 6536,
+      "completionTokens": 330,
+      "escalationReport": "**No repair could be verified after 3 attempt(s).**\n\nNo candidate repair passed against the application. The control this test needs may have been removed rather than moved, which is a product decision rather than a repair.\n\nA person should decide whether this test should be rewritten, retargeted or deleted.",
+      "error": null
+    },
+    {
+      "caseId": "n02",
+      "kind": "no-heal",
+      "primarySpec": "delete-task.spec.ts",
+      "variant": "n02",
+      "outcome": "refused-triage",
+      "triage": {
+        "verdict": "refuse",
+        "failureKind": "assertion-mismatch",
+        "structureChanged": false,
+        "reason": "Every locator still resolves and the page structure is unchanged from the last known-good build. Nothing moved, so the test is not broken — the application is. Repairing the test here would delete a real bug detection.",
+        "structureSummary": "No structural difference from the last known-good build."
+      },
+      "attempts": [],
+      "patchedTestDir": null,
+      "modelCalls": 0,
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "escalationReport": "**Suspected regression in the application, not the test.**\n\nEvery locator still resolves and the page structure is unchanged from the last known-good build. Nothing moved, so the test is not broken — the application is. Repairing the test here would delete a real bug detection.\n\nNo repair was attempted and no model was consulted. A person should look at the\napplication before this test is touched.",
+      "error": null
+    },
+    {
+      "caseId": "n03",
+      "kind": "no-heal",
+      "primarySpec": "items-left.spec.ts",
+      "variant": "n03",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "failureKind": "unresolved-locator",
+        "structureChanged": false,
+        "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+        "structureSummary": "No structural difference from the last known-good build."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 1840,
+          "completionTokens": 105,
+          "latencyMs": 976
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\n03\\tests",
+      "modelCalls": 1,
+      "promptTokens": 1840,
+      "completionTokens": 105,
+      "escalationReport": null,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "actor": "probe",
+  "label": "determinism (run 2)",
+  "at": "2026-08-28T16:10:22.766Z",
+  "request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Name three primary colours as a comma-separated list. No other text."
+      }
+    ],
+    "temperature": 0,
+    "maxTokens": 4096
+  },
+  "response": {
+    "text": "red, blue, yellow",
+    "model": "nemo-super",
+    "promptTokens": 40,
+    "completionTokens": 6,
+    "requestedModel": "nemo-super",
+    "usedFallback": false,
+    "latencyMs": 151,
+    "attempts": 1
+  },
+  "error": null
+}

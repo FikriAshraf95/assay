@@ -1,0 +1,13 @@
+import { expect, test } from '@playwright/test';
+
+test('adds a task to the list', async ({ page }) => {
+  await page.goto('/');
+
+  // The input is inside a <details> element that starts closed; open it first.
+  await page.getByRole('button', { name: 'New task' }).click();
+  await page.getByPlaceholder('What needs doing?').fill('Buy milk');
+  await page.locator('#add-task').click();
+
+  await expect(page.getByTestId('task-list')).toContainText('Buy milk');
+  await expect(page.getByTestId('task-item')).toHaveCount(4);
+});

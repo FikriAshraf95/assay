@@ -1,0 +1,31 @@
+{
+  "caseId": "m10",
+  "kind": "heal",
+  "primarySpec": "filter-active.spec.ts",
+  "variant": "m10",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "- input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=What needs doing? type=text}\n- button[1]{class=btn btn-primary data-testid=add-task id=add-task type=submit text=Add}\n- input[0]{class=search-input data-testid=search id=search placeholder=Search tasks type=search}\n- div[1]{aria-label=Filter tasks class=filters data-testid=filters id=filters role=group}\n- button[0]{class=filter is-active data-filter=all data-testid=filter-all type=button text=All}\n- button[1]{class=filter data-filter=active data-testid=filter-active type=button text=Active}\n- button[2]{class=filter data-filter=completed data-testid=filter-completed type=button text=Completed}\n- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n- button[0]{class=btn btn-ghost data-testid=clear-completed id=clear-completed type=button text=Clear completed}\n+ input[0]{class=composer-input data-testid=new-task-input id=new-task placeholder=¿Qué hay que hacer? type=text}\n+ button[1]{class=btn btn-primary data-testid=add-task id=add-task type=submit text=Añadir}\n+ input[0]{class=search-input data-testid=search id=search placeholder=Buscar tareas type=search}\n+ div[1]{aria-label=Filtrar tareas class=filters data-testid=filters id=filters role=group}\n+ button[0]{class=filter is-active data-filter=all data-testid=filter-all type=button text=Todas}\n+ button[1]{class=filter data-filter=active data-testid=filter-active type=button text=Activas}\n+ button[2]{class=filter data-filter=completed data-testid=filter-completed type=button text=Completadas}\n+ button[2]{class=task-delete data-testid=task-delete type=button text=Eliminar}\n+ button[2]{class=task-delete data-testid=task-delete type=button text=Eliminar}\n+ button[2]{class=task-delete data-testid=task-delete type=button text=Eliminar}\n+ button[0]{class=btn btn-ghost data-testid=clear-completed id=clear-completed type=button text=Borrar completadas}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 2429,
+      "completionTokens": 232,
+      "latencyMs": 7373
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\k3\\agent\\m10\\tests",
+  "modelCalls": 1,
+  "promptTokens": 2429,
+  "completionTokens": 232,
+  "escalationReport": null,
+  "error": null
+}

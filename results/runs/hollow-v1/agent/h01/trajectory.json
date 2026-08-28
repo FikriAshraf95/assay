@@ -1,0 +1,51 @@
+{
+  "caseId": "h01",
+  "kind": "heal",
+  "primarySpec": "filter-completed.spec.ts",
+  "variant": "h01",
+  "outcome": "escalated",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "+ div[0]{class=task-item task-inner data-testid=task-item}\n+ div[0]{class=task-item task-inner data-testid=task-item}\n+ div[0]{class=task-item task-inner data-testid=task-item}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 1942,
+      "completionTokens": 95,
+      "latencyMs": 998
+    },
+    {
+      "attempt": 2,
+      "parse": "patched",
+      "verified": true,
+      "guard": "hollow",
+      "rejection": "hollow",
+      "promptTokens": 2492,
+      "completionTokens": 102,
+      "latencyMs": 1018
+    },
+    {
+      "attempt": 3,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 2151,
+      "completionTokens": 95,
+      "latencyMs": 966
+    }
+  ],
+  "patchedTestDir": null,
+  "modelCalls": 3,
+  "promptTokens": 6585,
+  "completionTokens": 292,
+  "escalationReport": "**No repair could be verified after 3 attempt(s).**\n\nNo candidate repair passed against the application. The control this test needs may have been removed rather than moved, which is a product decision rather than a repair.\n\nA person should decide whether this test should be rewritten, retargeted or deleted.",
+  "error": null
+}

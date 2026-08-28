@@ -1,0 +1,51 @@
+{
+  "caseId": "n01",
+  "kind": "no-heal",
+  "primarySpec": "clear-completed.spec.ts",
+  "variant": "n01",
+  "outcome": "escalated",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "- button[0]{class=btn btn-ghost data-testid=clear-completed id=clear-completed type=button text=Clear completed}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 1781,
+      "completionTokens": 110,
+      "latencyMs": 1148
+    },
+    {
+      "attempt": 2,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 2295,
+      "completionTokens": 110,
+      "latencyMs": 1028
+    },
+    {
+      "attempt": 3,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 2295,
+      "completionTokens": 110,
+      "latencyMs": 1022
+    }
+  ],
+  "patchedTestDir": null,
+  "modelCalls": 3,
+  "promptTokens": 6371,
+  "completionTokens": 330,
+  "escalationReport": "**No repair could be verified after 3 attempt(s).**\n\nNo candidate repair passed against the application. The control this test needs may have been removed rather than moved, which is a product decision rather than a repair.\n\nA person should decide whether this test should be rewritten, retargeted or deleted.",
+  "error": null
+}

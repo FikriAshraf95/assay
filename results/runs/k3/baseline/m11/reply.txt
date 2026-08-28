@@ -1,0 +1,13 @@
+```ts
+import { expect, test } from '@playwright/test';
+
+/** Locator strategy: by test id — the filter buttons have been reordered, so use filter-completed. */
+test('the completed filter shows only finished tasks', async ({ page }) => {
+  await page.goto('/');
+
+  await page.getByTestId('filter-completed').click();
+
+  await expect(page.getByTestId('task-item')).toHaveCount(1);
+  await expect(page.getByTestId('task-list')).toContainText('Pin the evaluation set');
+});
+```

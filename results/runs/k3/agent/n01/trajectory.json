@@ -1,0 +1,31 @@
+{
+  "caseId": "n01",
+  "kind": "no-heal",
+  "primarySpec": "clear-completed.spec.ts",
+  "variant": "n01",
+  "outcome": "refused-model",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "- button[0]{class=btn btn-ghost data-testid=clear-completed id=clear-completed type=button text=Clear completed}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "refused",
+      "verified": null,
+      "guard": "skipped",
+      "rejection": null,
+      "promptTokens": 1815,
+      "completionTokens": 171,
+      "latencyMs": 9350
+    }
+  ],
+  "patchedTestDir": null,
+  "modelCalls": 1,
+  "promptTokens": 1815,
+  "completionTokens": 171,
+  "escalationReport": null,
+  "error": null
+}

@@ -1,0 +1,14 @@
+{
+  "caseId": "m01",
+  "kind": "heal",
+  "primarySpec": "delete-task.spec.ts",
+  "variant": "m01",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\triage-v2\\baseline\\m01\\tests",
+  "model": "nemo-super",
+  "usedFallback": false,
+  "promptTokens": 1613,
+  "completionTokens": 144,
+  "latencyMs": 1312,
+  "error": null
+}

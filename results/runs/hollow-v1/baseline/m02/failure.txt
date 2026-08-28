@@ -1,0 +1,27 @@
+Running 1 test using 1 worker
+
+  x  1 tests\add-task.spec.ts:4:1 › adds a task to the list (15.0s)
+
+
+  1) tests\add-task.spec.ts:4:1 › adds a task to the list ──────────────────────────────────────────
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for locator('#add-task')
+
+
+       6 |
+       7 |   await page.getByPlaceholder('What needs doing?').fill('Buy milk');
+    >  8 |   await page.locator('#add-task').click();
+         |                                   ^
+       9 |
+      10 |   await expect(page.getByTestId('task-list')).toContainText('Buy milk');
+      11 |   await expect(page.getByTestId('task-item')).toHaveCount(4);
+        at D:\Works\ai\competition\assay\tests\add-task.spec.ts:8:35
+
+    Error Context: test-results\add-task-adds-a-task-to-the-list\error-context.md
+
+  1 failed
+    tests\add-task.spec.ts:4:1 › adds a task to the list ───────────────────────────────────────────

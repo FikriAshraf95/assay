@@ -1,0 +1,52 @@
+{
+  "caseId": "m12",
+  "kind": "heal",
+  "primarySpec": "add-task.spec.ts",
+  "variant": "m12",
+  "outcome": "escalated",
+  "triage": {
+    "verdict": "repair",
+    "failureKind": "unresolved-locator",
+    "structureChanged": true,
+    "reason": "A locator no longer resolves, so something the test addresses has moved or changed.",
+    "structureSummary": "+ details[1]{class=composer-shell}\n+ summary[0]{class=composer-summary}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 1979,
+      "completionTokens": 119,
+      "latencyMs": 1141
+    },
+    {
+      "attempt": 2,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 2730,
+      "completionTokens": 145,
+      "latencyMs": 1336
+    },
+    {
+      "attempt": 3,
+      "parse": "patched",
+      "verified": false,
+      "guard": "skipped",
+      "rejection": "still-failing",
+      "promptTokens": 2604,
+      "completionTokens": 145,
+      "latencyMs": 1325
+    }
+  ],
+  "patchedTestDir": null,
+  "modelCalls": 3,
+  "promptTokens": 7313,
+  "completionTokens": 409,
+  "escalationReport": "**No repair could be verified after 3 attempt(s).**\n\nNo candidate repair passed against the application. The control this test needs may have been removed rather than moved, which is a product decision rather than a repair.\n\nA person should decide whether this test should be rewritten, retargeted or deleted.",
+  "error": null
+}

@@ -1,0 +1,14 @@
+{
+  "caseId": "n02",
+  "kind": "no-heal",
+  "primarySpec": "delete-task.spec.ts",
+  "variant": "n02",
+  "outcome": "refused",
+  "patchedTestDir": null,
+  "model": "kimi-k3",
+  "usedFallback": false,
+  "promptTokens": 1643,
+  "completionTokens": 3936,
+  "latencyMs": 118793,
+  "error": null
+}

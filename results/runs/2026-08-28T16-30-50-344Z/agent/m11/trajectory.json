@@ -1,0 +1,32 @@
+{
+  "caseId": "m11",
+  "kind": "heal",
+  "primarySpec": "filter-completed.spec.ts",
+  "variant": "m11",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "failureKind": "assertion-mismatch",
+    "structureChanged": true,
+    "reason": "Every locator resolved, but the page structure differs from the last known-good build — a locator is very likely resolving to the wrong element.",
+    "structureSummary": "- button[0]{class=filter is-active data-filter=all data-testid=filter-all type=button}\n- button[2]{class=filter data-filter=completed data-testid=filter-completed type=button}\n+ button[0]{class=filter data-filter=completed data-testid=filter-completed type=button}\n+ button[2]{class=filter is-active data-filter=all data-testid=filter-all type=button}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 1926,
+      "completionTokens": 95,
+      "latencyMs": 1030
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\2026-08-28T16-30-50-344Z\\agent\\m11\\tests",
+  "modelCalls": 1,
+  "promptTokens": 1926,
+  "completionTokens": 95,
+  "escalationReport": null,
+  "error": null
+}

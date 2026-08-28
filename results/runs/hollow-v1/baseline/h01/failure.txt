@@ -1,0 +1,34 @@
+Running 1 test using 1 worker
+
+  x  1 tests\filter-completed.spec.ts:4:1 › the completed filter shows only finished tasks (4.4s)
+
+
+  1) tests\filter-completed.spec.ts:4:1 › the completed filter shows only finished tasks ───────────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('task-item')
+    Expected: 1
+    Received: 2
+    Timeout:  4000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 4000ms
+      - waiting for getByTestId('task-item')
+        12 × locator resolved to 2 elements
+           - unexpected value "2"
+
+
+       7 |   await page.locator('.filter').nth(2).click();
+       8 |
+    >  9 |   await expect(page.getByTestId('task-item')).toHaveCount(1);
+         |                                               ^
+      10 |   await expect(page.getByTestId('task-list')).toContainText('Pin the evaluation set');
+      11 | });
+      12 |
+        at D:\Works\ai\competition\assay\tests\filter-completed.spec.ts:9:47
+
+    Error Context: test-results\filter-completed-the-compl-3c665-r-shows-only-finished-tasks\error-context.md
+
+  1 failed
+    tests\filter-completed.spec.ts:4:1 › the completed filter shows only finished tasks ────────────
