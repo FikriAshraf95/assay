@@ -1,0 +1,82 @@
+{
+  "runId": "demo-h01",
+  "system": "agent",
+  "at": "2026-08-28T23:54:39.499Z",
+  "config": {
+    "provider": "primary",
+    "primaryModel": "nemo-super",
+    "primaryBaseUrl": "https://api.ilmu.ai/v1",
+    "fallbackModel": "ilmu-nemo-nano",
+    "fallbackEnabled": false,
+    "temperature": "0",
+    "maxTokens": "4096"
+  },
+  "modelsSeen": [
+    "nemo-super"
+  ],
+  "totals": {
+    "cases": 1,
+    "acceptedGuarded": 0,
+    "acceptedUnguarded": 0,
+    "refusedTriage": 0,
+    "refusedModel": 0,
+    "escalated": 1,
+    "errors": 0,
+    "modelCalls": 3,
+    "promptTokens": 6587,
+    "completionTokens": 294
+  },
+  "results": [
+    {
+      "caseId": "h01",
+      "kind": "heal",
+      "primarySpec": "filter-completed.spec.ts",
+      "variant": "h01",
+      "outcome": "escalated",
+      "triage": {
+        "verdict": "repair",
+        "structureChanged": true,
+        "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+        "structureSummary": "+ div[0]{class=task-item task-inner data-testid=task-item}\n+ div[0]{class=task-item task-inner data-testid=task-item}\n+ div[0]{class=task-item task-inner data-testid=task-item}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 1942,
+          "completionTokens": 95,
+          "latencyMs": 930
+        },
+        {
+          "attempt": 2,
+          "parse": "patched",
+          "verified": true,
+          "guard": "hollow",
+          "rejection": "hollow",
+          "promptTokens": 2492,
+          "completionTokens": 104,
+          "latencyMs": 972
+        },
+        {
+          "attempt": 3,
+          "parse": "patched",
+          "verified": false,
+          "guard": "skipped",
+          "rejection": "still-failing",
+          "promptTokens": 2153,
+          "completionTokens": 95,
+          "latencyMs": 973
+        }
+      ],
+      "patchedTestDir": null,
+      "modelCalls": 3,
+      "promptTokens": 6587,
+      "completionTokens": 294,
+      "escalationReport": "**No repair could be verified after 3 attempt(s).**\n\nNo candidate repair passed against the application. The control this test needs may have been removed rather than moved, which is a product decision rather than a repair.\n\nA person should decide whether this test should be rewritten, retargeted or deleted.",
+      "error": null
+    }
+  ]
+}

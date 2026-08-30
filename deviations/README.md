@@ -26,3 +26,5 @@ These entries are also the raw material for the Improvement Changelog in the fin
 | [D012](D012-frontier-model-saturates.md) | §3, §8 | A frontier model saturates the evaluation set | reported as a result |
 | [D013](D013-guard-has-not-earned-its-keep.md) | §2, §5 | The guard has never rejected a repair | open finding |
 | [D014](D014-hollow-temptation-cases.md) | §4 | Three cases added to test the guard directly | accepted |
+| [D015](D015-nemo-super-not-fully-deterministic.md) | §7 | "Deterministic at temperature 0" was an overclaim — corrected | correction |
+| [D016](D016-single-case-runs.md) | §7 | Runs can be restricted to named cases with `ASSAY_CASE` | accepted |

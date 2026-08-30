@@ -1,0 +1,11 @@
+import { expect, test } from '@playwright/test';
+
+/** Locator strategy: child-combinator CSS + test id + class assertion. */
+test('marks a task as complete and updates the counter', async ({ page }) => {
+  await page.goto('/');
+
+  await page.locator('.task-item > .task-toggle').first().check();
+
+  await expect(page.getByTestId('items-left')).toHaveText('1 item left');
+  await expect(page.locator('.task-item').first()).toHaveClass(/is-completed/);
+});

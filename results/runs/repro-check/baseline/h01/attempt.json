@@ -1,0 +1,14 @@
+{
+  "caseId": "h01",
+  "kind": "heal",
+  "primarySpec": "filter-completed.spec.ts",
+  "variant": "h01",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\repro-check\\baseline\\h01\\tests",
+  "model": "nemo-super",
+  "usedFallback": false,
+  "promptTokens": 1513,
+  "completionTokens": 118,
+  "latencyMs": 1198,
+  "error": null
+}

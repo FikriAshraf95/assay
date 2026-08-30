@@ -1,0 +1,14 @@
+{
+  "caseId": "m06",
+  "kind": "heal",
+  "primarySpec": "empty-state.spec.ts",
+  "variant": "m06",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\repro-check\\baseline\\m06\\tests",
+  "model": "nemo-super",
+  "usedFallback": false,
+  "promptTokens": 1503,
+  "completionTokens": 167,
+  "latencyMs": 1445,
+  "error": null
+}

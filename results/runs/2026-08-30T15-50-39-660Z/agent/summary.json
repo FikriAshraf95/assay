@@ -1,0 +1,49 @@
+{
+  "runId": "2026-08-30T15-50-39-660Z",
+  "system": "agent",
+  "at": "2026-08-30T15:50:47.630Z",
+  "config": {
+    "provider": "primary",
+    "primaryModel": "nemo-super",
+    "primaryBaseUrl": "https://api.ilmu.ai/v1",
+    "fallbackModel": "ilmu-nemo-nano",
+    "fallbackEnabled": false,
+    "temperature": "0",
+    "maxTokens": "4096"
+  },
+  "modelsSeen": [],
+  "totals": {
+    "cases": 1,
+    "acceptedGuarded": 0,
+    "acceptedUnguarded": 0,
+    "refusedTriage": 1,
+    "refusedModel": 0,
+    "escalated": 0,
+    "errors": 0,
+    "modelCalls": 0,
+    "promptTokens": 0,
+    "completionTokens": 0
+  },
+  "results": [
+    {
+      "caseId": "n03",
+      "kind": "no-heal",
+      "primarySpec": "items-left.spec.ts",
+      "variant": "n03",
+      "outcome": "refused-triage",
+      "triage": {
+        "verdict": "refuse",
+        "structureChanged": false,
+        "reason": "Every control is still present, still named the same and still in the same place as the last known-good build. Nothing the test addresses has changed, so the test is not broken — the application is. Repairing it here would delete a real bug detection.",
+        "structureSummary": "No structural difference from the last known-good build."
+      },
+      "attempts": [],
+      "patchedTestDir": null,
+      "modelCalls": 0,
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "escalationReport": "**Suspected regression in the application, not the test.**\n\nEvery control is still present, still named the same and still in the same place as the last known-good build. Nothing the test addresses has changed, so the test is not broken — the application is. Repairing it here would delete a real bug detection.\n\nNo repair was attempted and no model was consulted. A person should look at the\napplication before this test is touched.",
+      "error": null
+    }
+  ]
+}

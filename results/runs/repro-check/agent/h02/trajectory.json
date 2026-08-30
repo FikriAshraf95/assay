@@ -1,0 +1,31 @@
+{
+  "caseId": "h02",
+  "kind": "heal",
+  "primarySpec": "items-left.spec.ts",
+  "variant": "h02",
+  "outcome": "accepted-guarded",
+  "triage": {
+    "verdict": "repair",
+    "structureChanged": true,
+    "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+    "structureSummary": "+ span[0]{class=count}\n+ span[1]{class=hint}"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "parse": "patched",
+      "verified": true,
+      "guard": "confirmed",
+      "rejection": null,
+      "promptTokens": 1871,
+      "completionTokens": 109,
+      "latencyMs": 1087
+    }
+  ],
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\repro-check\\agent\\h02\\tests",
+  "modelCalls": 1,
+  "promptTokens": 1871,
+  "completionTokens": 109,
+  "escalationReport": null,
+  "error": null
+}

@@ -1,0 +1,14 @@
+{
+  "caseId": "h03",
+  "kind": "heal",
+  "primarySpec": "items-left.spec.ts",
+  "variant": "h03",
+  "outcome": "patched",
+  "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\repro-check\\baseline\\h03\\tests",
+  "model": "nemo-super",
+  "usedFallback": false,
+  "promptTokens": 1456,
+  "completionTokens": 103,
+  "latencyMs": 956,
+  "error": null
+}

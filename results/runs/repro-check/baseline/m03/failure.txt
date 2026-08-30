@@ -1,0 +1,32 @@
+Running 1 test using 1 worker
+
+  x  1 tests\complete-task.spec.ts:4:1 › marks a task as complete and updates the counter (4.3s)
+
+
+  1) tests\complete-task.spec.ts:4:1 › marks a task as complete and updates the counter ────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByTestId('items-left')
+    Expected: "1 item left"
+    Timeout: 4000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" with timeout 4000ms
+      - waiting for getByTestId('items-left')
+
+
+       7 |   await page.locator('.task-item > .task-toggle').first().check();
+       8 |
+    >  9 |   await expect(page.getByTestId('items-left')).toHaveText('1 item left');
+         |                                                ^
+      10 |   await expect(page.locator('.task-item').first()).toHaveClass(/is-completed/);
+      11 | });
+      12 |
+        at D:\Works\ai\competition\assay\tests\complete-task.spec.ts:9:48
+
+    Error Context: test-results\complete-task-marks-a-task-5bcb6-ete-and-updates-the-counter\error-context.md
+
+  1 failed
+    tests\complete-task.spec.ts:4:1 › marks a task as complete and updates the counter ─────────────

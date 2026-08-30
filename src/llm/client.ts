@@ -22,8 +22,24 @@ import OpenAI from 'openai';
 
 const ROOT = fileURLToPath(new URL('../../', import.meta.url));
 
+/**
+ * `process.loadEnvFile` is Node 22+. On an older Node it's just `undefined`, so calling it through
+ * optional chaining would silently no-op: `.env` never loads, API keys stay unset, and the failure
+ * surfaces later as a confusing "missing credentials" error instead of a clear version mismatch.
+ */
+function assertNodeVersion(): void {
+  const major = Number(process.versions.node.split('.')[0]);
+  if (major < 22) {
+    throw new Error(
+      `Assay requires Node >= 22.0.0 (process.loadEnvFile is used to read .env). ` +
+        `Found Node ${process.version}. Install Node 22+ and retry.`,
+    );
+  }
+}
+
 /** Node 22 reads .env natively; no dependency needed. Safe to call more than once. */
 export function loadEnv(): void {
+  assertNodeVersion();
   const file = join(ROOT, '.env');
   if (!existsSync(file)) return;
   const runtime = process as NodeJS.Process & { loadEnvFile?: (path: string) => void };

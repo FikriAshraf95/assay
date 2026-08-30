@@ -1,0 +1,28 @@
+Running 1 test using 1 worker
+
+  x  1 tests\add-task.spec.ts:4:1 › adds a task to the list (215ms)
+
+
+  1) tests\add-task.spec.ts:4:1 › adds a task to the list ──────────────────────────────────────────
+
+    Error: locator.fill: Error: strict mode violation: getByPlaceholder('What needs doing?') resolved to 2 elements:
+        1) <input type="text" autocomplete="off" class="composer-input" placeholder="What needs doing?"/> aka getByTestId('quick-add').getByRole('textbox', { name: 'What needs doing?' })
+        2) <input type="text" id="new-task" autocomplete="off" class="composer-input" data-testid="new-task-input" placeholder="What needs doing?"/> aka getByTestId('new-task-input')
+
+    Call log:
+      - waiting for getByPlaceholder('What needs doing?')
+
+
+       5 |   await page.goto('/');
+       6 |
+    >  7 |   await page.getByPlaceholder('What needs doing?').fill('Buy milk');
+         |                                                    ^
+       8 |   await page.locator('#add-task').click();
+       9 |
+      10 |   await expect(page.getByTestId('task-list')).toContainText('Buy milk');
+        at D:\Works\ai\competition\assay\tests\add-task.spec.ts:7:52
+
+    Error Context: test-results\add-task-adds-a-task-to-the-list\error-context.md
+
+  1 failed
+    tests\add-task.spec.ts:4:1 › adds a task to the list ───────────────────────────────────────────

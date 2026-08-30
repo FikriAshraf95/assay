@@ -1,0 +1,62 @@
+{
+  "runId": "demo-m07",
+  "system": "agent",
+  "at": "2026-08-28T23:55:45.126Z",
+  "config": {
+    "provider": "primary",
+    "primaryModel": "nemo-super",
+    "primaryBaseUrl": "https://api.ilmu.ai/v1",
+    "fallbackModel": "ilmu-nemo-nano",
+    "fallbackEnabled": false,
+    "temperature": "0",
+    "maxTokens": "4096"
+  },
+  "modelsSeen": [
+    "nemo-super"
+  ],
+  "totals": {
+    "cases": 1,
+    "acceptedGuarded": 1,
+    "acceptedUnguarded": 0,
+    "refusedTriage": 0,
+    "refusedModel": 0,
+    "escalated": 0,
+    "errors": 0,
+    "modelCalls": 1,
+    "promptTokens": 2344,
+    "completionTokens": 149
+  },
+  "results": [
+    {
+      "caseId": "m07",
+      "kind": "heal",
+      "primarySpec": "delete-task.spec.ts",
+      "variant": "m07",
+      "outcome": "accepted-guarded",
+      "triage": {
+        "verdict": "repair",
+        "structureChanged": true,
+        "reason": "The page structure differs from the last known-good build, so something the test addresses has moved, been renamed or been reordered.",
+        "structureSummary": "- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n- button[2]{class=task-delete data-testid=task-delete type=button text=Delete}\n+ button[2]{aria-label=Remove class=task-delete data-testid=task-delete type=button text=}\n+ svg[0]{aria-hidden=true}\n+ path[0]{}\n+ button[2]{aria-label=Remove class=task-delete data-testid=task-delete type=button text=}\n+ svg[0]{aria-hidden=true}\n+ path[0]{}\n+ button[2]{aria-label=Remove class=task-delete data-testid=task-delete type=button text=}\n+ svg[0]{aria-hidden=true}\n+ path[0]{}"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "parse": "patched",
+          "verified": true,
+          "guard": "confirmed",
+          "rejection": null,
+          "promptTokens": 2344,
+          "completionTokens": 149,
+          "latencyMs": 1462
+        }
+      ],
+      "patchedTestDir": "D:\\Works\\ai\\competition\\assay\\results\\runs\\demo-m07\\agent\\m07\\tests",
+      "modelCalls": 1,
+      "promptTokens": 2344,
+      "completionTokens": 149,
+      "escalationReport": null,
+      "error": null
+    }
+  ]
+}
